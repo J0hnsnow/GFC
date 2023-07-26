@@ -81,7 +81,9 @@ const HomeScreen = () => {
                 // borderColor: colors.border,
                 alignItems: "center",
                 paddingHorizontal: 24,
-                backgroundColor: "rgb(160, 118, 249)",
+                // backgroundColor: "rgb(160, 118, 249)",
+                backgroundColor: 'rgba(3, 4, 95, 0.2)',
+                borderColor: colors.border,
                 // "rgb(122, 49, 111)",
               }}
             >
@@ -154,8 +156,10 @@ const HomeScreen = () => {
                   paddingHorizontal: 24,
                   flexDirection: "row",
                   gap: 12,
-                  backgroundColor: "rgb(215, 187, 245)",
+                  // backgroundColor: "rgb(215, 187, 245)",
+                  backgroundColor: 'rgba(3, 4, 95, 0.2)',
                   // 'rgb(174, 216, 204)',
+                  borderColor: colors.border,
 
                 }}
               >
@@ -168,8 +172,9 @@ const HomeScreen = () => {
                 <Text
                   style={{
                     flex: 1,
-                    fontSize: 18,
+                    fontSize: 16,
                     color: "white",
+                    fontWeight:'300'
                     // opacity: 0.5,
                   }}
                 >
@@ -189,10 +194,11 @@ const HomeScreen = () => {
                   alignItems: "center",
                   paddingHorizontal: 24,
                   flexDirection: "row",
+                  borderColor: colors.border,
                   gap: 12,
-                  backgroundColor: "rgba(215, 187, 245, 0.5)",
+                  // backgroundColor: "rgba(215, 187, 245, 0.5)",
 
-                  // backgroundColor: 'rgba(3, 4, 95, 0.2)',
+                  backgroundColor: 'rgba(3, 4, 95, 0.2)',
 
                 }}
               >
@@ -205,8 +211,9 @@ const HomeScreen = () => {
                 <Text
                   style={{
                     flex: 1,
-                    fontSize: 18,
+                    fontSize: 16,
                     color: "white",
+                    fontWeight:'300'
                   }}
                 >
                   Request
@@ -229,7 +236,8 @@ const HomeScreen = () => {
                   gap: 12,
                   backgroundColor: 'rgba(3, 4, 95, 0.2)',
                   margin:20,
-                  paddingVertical:14
+                  paddingVertical:14,
+                  
 
                 }}
               >
@@ -270,21 +278,22 @@ const HomeScreen = () => {
                   onPress={() => setCategoryIndex(index)}
                   style={{
                     
-
-                    backgroundColor: isSelected ? 'rgb(110, 220, 217)' : "",
+                   
+                    backgroundColor: isSelected ?  'rgba(3, 4, 95, 0.2)' : "",
                     paddingHorizontal: 20,
                     paddingVertical: 12,
                     borderRadius: 100,
                     borderWidth: isSelected ? 1 : 0,
-                    borderColor: 'none',
+                    borderColor: colors.border,
                   }}
                 >
                   <Text
                     style={{
-                      color: isSelected ? "rgb(0,0,0,1)" : "black",
+                      color: isSelected ? "white" : "white",
                       fontWeight: "600",
                       fontSize: 14,
                       opacity: isSelected ? 0.5 : 1,
+                      
                     }}
                   >
                     {item}
