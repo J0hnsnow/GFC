@@ -6,6 +6,7 @@ import Icons from "@expo/vector-icons/MaterialIcons";
 import { FontAwesome } from "@expo/vector-icons";
 import PortfolioScreen from "../Screens/PortfolioScreen";
 import SettingScreen from "../Screens/SettingScreen";
+import Transaction from "../Screens/Transaction";
 
 export type TabsStackParamList = {
   home: undefined;
@@ -48,7 +49,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen
         name="markets"
-        component={HomeScreen}
+        component={Transaction}
         options={{
           headerTransparent: true,
           headerShown: false,

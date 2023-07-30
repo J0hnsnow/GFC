@@ -13,6 +13,7 @@ import Icons from "@expo/vector-icons/MaterialIcons";
 import WatchList from "../components/WatchList/WatchList";
 import ScreenGradient from "./ScreenGradient";
 
+
 const Categories = [
   "Favorites",
   "Hot",
@@ -24,7 +25,7 @@ const Categories = [
 ];
 
 const AVATAR_URL =
-  "https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp";
+  "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
 const HomeScreen = () => {
   const { colors } = useTheme();
@@ -46,8 +47,8 @@ const HomeScreen = () => {
           >
             <Image
               source={{ uri: AVATAR_URL }}
-              style={{ width: 32, aspectRatio: 1, borderRadius: 32 }}
-              resizeMode="cover"
+              style={{ width: 42, aspectRatio: 1, borderRadius: 32,  borderColor: 'white', }}
+             resizeMode="cover" 
             />
 
             <TouchableOpacity
@@ -74,23 +75,26 @@ const HomeScreen = () => {
             <TouchableOpacity
               style={{
                 flex: 1,
-                height: 150,
+                height: 200,
                 borderRadius: 12,
                 borderWidth: 1,
-                borderColor: colors.border,
+                // borderColor: colors.border,
                 alignItems: "center",
                 paddingHorizontal: 24,
-
-                backgroundColor: "rgba(3, 4, 95, 0.2)",
+                // backgroundColor: "rgb(160, 118, 249)",
+                backgroundColor: 'rgba(3, 4, 95, 0.2)',
+                borderColor: colors.border,
+                // "rgb(122, 49, 111)",
               }}
             >
               <View style={{ gap: 12 }}>
                 <Text
                   style={{
                     top: 10,
-                    fontSize: 16,
+                    // fontSize: 12,
                     color: "white",
                     left: 24,
+                    fontWeight:'300'
                     // opacity: 0.5,
                   }}
                 >
@@ -99,15 +103,16 @@ const HomeScreen = () => {
                 <View style={{ flexDirection: "row", gap: 10 }}>
                   <Icons
                     name="attach-money"
-                    size={34}
+                    size={24}
                     color="white"
                     // style={{ opacity: 0.5 }}
                   />
                   <Text
                     style={{
-                      // flex: 1,
-                      fontSize: 34,
+                      flex: 1,
+                      fontSize: 24,
                       color: "white",
+                      fontWeight:'bold'
                       // opacity: 0.5,
                     }}
                   >
@@ -116,11 +121,12 @@ const HomeScreen = () => {
                 </View>
                 <Text
                   style={{
-                    fontSize: 16,
+                    // fontSize: 12,
                     color: "white",
                     // opacity: 0.5,
                     paddingHorizontal: 24,
                     // bottom: 10,
+                    fontWeight:'300'
                   }}
                 >
                   Monthly Profit
@@ -145,17 +151,20 @@ const HomeScreen = () => {
                   height: 80,
                   borderRadius: 12,
                   borderWidth: 1,
-                  borderColor: colors.border,
+                  // borderColor: colors.border,
                   alignItems: "center",
                   paddingHorizontal: 24,
                   flexDirection: "row",
                   gap: 12,
+                  // backgroundColor: "rgb(215, 187, 245)",
                   backgroundColor: 'rgba(3, 4, 95, 0.2)',
+                  // 'rgb(174, 216, 204)',
+                  borderColor: colors.border,
 
                 }}
               >
                  <Icons
-                  name="add"
+                  name="add-circle"
                   size={24}
                   color="white"
                   // style={{ opacity: 0.5 }}
@@ -163,8 +172,9 @@ const HomeScreen = () => {
                 <Text
                   style={{
                     flex: 1,
-                    fontSize: 18,
+                    fontSize: 16,
                     color: "white",
+                    fontWeight:'300'
                     // opacity: 0.5,
                   }}
                 >
@@ -180,17 +190,20 @@ const HomeScreen = () => {
                   height: 80,
                   borderRadius: 12,
                   borderWidth: 1,
-                  borderColor: colors.border,
+                  // borderColor: colors.border,
                   alignItems: "center",
                   paddingHorizontal: 24,
                   flexDirection: "row",
+                  borderColor: colors.border,
                   gap: 12,
+                  // backgroundColor: "rgba(215, 187, 245, 0.5)",
+
                   backgroundColor: 'rgba(3, 4, 95, 0.2)',
 
                 }}
               >
                   <Icons
-                  name="person-add"
+                  name="cached"
                   size={24}
                   color="white"
                   // style={{ opacity: 0.5 }}
@@ -198,8 +211,9 @@ const HomeScreen = () => {
                 <Text
                   style={{
                     flex: 1,
-                    fontSize: 18,
+                    fontSize: 16,
                     color: "white",
+                    fontWeight:'300'
                   }}
                 >
                   Request
@@ -222,12 +236,13 @@ const HomeScreen = () => {
                   gap: 12,
                   backgroundColor: 'rgba(3, 4, 95, 0.2)',
                   margin:20,
-                  paddingVertical:14
+                  paddingVertical:14,
+                  
 
                 }}
               >
                     <Icons
-                  name="east"
+                  name="compare-arrows"
                   size={24}
                   color="white"
                   style={{ paddingHorizontal:24 }}
@@ -263,8 +278,8 @@ const HomeScreen = () => {
                   onPress={() => setCategoryIndex(index)}
                   style={{
                     
-
-                    backgroundColor: isSelected ? 'rgba(3, 4, 95, 0.2)' : "",
+                   
+                    backgroundColor: isSelected ?  'rgba(3, 4, 95, 0.2)' : "",
                     paddingHorizontal: 20,
                     paddingVertical: 12,
                     borderRadius: 100,
@@ -278,6 +293,7 @@ const HomeScreen = () => {
                       fontWeight: "600",
                       fontSize: 14,
                       opacity: isSelected ? 0.5 : 1,
+                      
                     }}
                   >
                     {item}
