@@ -18,7 +18,7 @@ export type TabsStackParamList = {
 const TabsNavigator = () => {
   const TabsStack = createBottomTabNavigator<TabsStackParamList>();
   return (
-    <View style={{  flex: 1,
+    <View style={{  flex:1,top:120,margin:20
       }}>
     <TabsStack.Navigator
   

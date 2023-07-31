@@ -35,9 +35,9 @@ const Boxcoin = ({ item }: any) => {
           >
             {item.title}
           </Text>
-          <Text style={{ fontSize: 14, color: "white", opacity: 0.5 }}>
+          {/* <Text style={{ fontSize: 14, color: "white", opacity: 0.5 }}>
             {item.shortTitle}
-          </Text>
+          </Text> */}
           </View>
         
         <View style={{flexDirection:"row"}}>
