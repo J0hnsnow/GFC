@@ -12,6 +12,7 @@ import { useTheme } from "@react-navigation/native";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import WatchList from "../components/WatchList/WatchList";
 import ScreenGradient from "./ScreenGradient";
+import LinearGradient from "react-native-linear-gradient";
 
 const Categories = [
   "Favorites",
@@ -68,6 +69,7 @@ const HomeScreen = () => {
                 borderRadius: 22,
                 borderWidth: 1,
                 backgroundColor: "#050730",
+               
                 // borderColor:colors.border,
               }}
             >
@@ -78,15 +80,17 @@ const HomeScreen = () => {
           <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
             <TouchableOpacity
               style={{
+                // background: linear-gradient(253deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 100%);
+                
                 flex: 1,
                 height: 200,
                 borderRadius: 12,
-                borderWidth: 1,
-                // borderColor: colors.border,
+                
                 alignItems: "center",
                 paddingHorizontal: 24,
-                // backgroundColor: "rgb(160, 118, 249)",
-                backgroundColor: "rgba(3, 4, 95, 0.2)",
+                backgroundColor: '  rgba(255, 255, 255, 0.05) 100%',
+                // backgroundColor: "rgba(3, 4, 95, 0.2)",
+              
                 borderColor: colors.border,
                 // "rgb(122, 49, 111)",
               }}
