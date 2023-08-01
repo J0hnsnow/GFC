@@ -18,13 +18,18 @@ export type TabsStackParamList = {
 const TabsNavigator = () => {
   const TabsStack = createBottomTabNavigator<TabsStackParamList>();
   return (
-    <View style={{  flex: 1,
-      }}>
     <TabsStack.Navigator
-  
-      screenOptions={{ tabBarShowLabel: false, headerTransparent: true }}
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 30,
+          marginHorizontal:50,
+          borderRadius:32
+
+        },
+      }}
     >
-     
       <TabsStack.Screen
         name="home"
         component={HomeScreen}
@@ -36,7 +41,7 @@ const TabsNavigator = () => {
           },
         }}
       />
-        <TabsStack.Screen
+      <TabsStack.Screen
         name="portfolio"
         component={PortfolioScreen}
         options={{
@@ -58,7 +63,6 @@ const TabsNavigator = () => {
           },
         }}
       />
-    
 
       <TabsStack.Screen
         name="browser"
@@ -82,9 +86,7 @@ const TabsNavigator = () => {
           },
         }}
       />
-      
     </TabsStack.Navigator>
-    </View>
   );
 };
 
@@ -93,5 +95,3 @@ export default TabsNavigator;
 const Example = () => {
   return <View />;
 };
-
-

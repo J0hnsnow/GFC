@@ -13,8 +13,13 @@ const ScreenGradient: React.FC<ScreenGradientProps> = ({ children, headerPadding
 
   return (
     <LinearGradient
-    colors={['#000000','#1E0323','#331D2C','#2E0249','#570A57','#A91079','#F806CC','#930E17']}
-      // colors={['black', 'black','#1E0323','#1E0323','purple' ,'#930E17']}
+   
+
+// colors={['black',' rgba(0,0,0,1) 100.2%',' rgba(9,29,85,1) 0.2%','#219BA1','#2675C0','#103F77']}
+// colors={['#219BA1','#2675C0','#103F77']}
+colors={[ 'rgba(4,56,115,1) 91.6% )',' rgba(0,85,255,1) 1.5%', ]}
+
+
       start={{ x: 0.9, y: 0.1 }}
       style={{
         flex: 1,

@@ -163,11 +163,11 @@ const Portfolio = () => {
                         // opacity: 0.5,
                       }}
                     >
-                      -$0.04 (-4.19%)
+                      -$0.04 (-4.19%)                                                
                     </Text>
                   </TouchableOpacity>
                 </View>
-
++
                 {/*swap buttons  */}
                 <View
                   style={{
