@@ -137,72 +137,7 @@ import {
                 <Text style={{fontWeight:'600',fontSize:16, color: '#fff'}}>Transactions</Text>
 
               </View>
-              {/* <FlatList
-            data={coins}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{
-              paddingVertical: 16,
-              gap: 12,
-            }}
-            renderItem={({ item, index }) => {
-              // const isSelected = coinsIndex === index;
-
-              return (
-                <TouchableOpacity
-                  // onPress={() => setListIndex(index)}
-                  style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    marginBottom: 20,
-
-                    // backgroundColor: isSelected ? "rgba(3, 4, 95, 0.2)" : "",
-                    paddingHorizontal: 20,
-                    paddingVertical: 12,
-                    borderRadius: 12,
-                    // borderWidth: isSelected ? 1 : 0,
-                    // borderColor: colors.border,
-                  }}
-                >
-                  <View
-                    style={{
-                      paddingHorizontal: 5,
-                      alignItems: "center",
-                    }}
-                  >
-                    <View style={{ width: 300 }}>
-                      <Text
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: 16,
-                          // color: "white",
-                          // color: isSelected ? "#F61491" : "white",
-                          // opacity: 0.5,
-                        }}
-                      >
-                        {item.title}
-                      </Text>
-                      <Text
-                        style={{ fontSize: 16, color: "white",  opacity: isSelected ? 1: 0.5,}}
-                      >
-                        {item.shortTitle}
-                      </Text>
-                    </View>
-                  </View>
-
-                  <View>
-                    <Icons
-                      name="chevron-right"
-                      size={26}
-                      color="white"
-                      // style={{ opacity: 0.5 }}
-                    />
-                  </View>
-                </TouchableOpacity>
-              );
-            }}
-            /> */}
-
+             
            
           </SafeAreaView>
         </ScrollView>

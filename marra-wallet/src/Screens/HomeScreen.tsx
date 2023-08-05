@@ -16,7 +16,7 @@ import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 
-const notifications=[
+const notifications = [
   {
     id: "1",
     icon: "icon 1",
@@ -287,16 +287,29 @@ const HomeScreen = () => {
               </TouchableOpacity>
             </View>
           </View>
-          {/* category section  */}
-          {/* <FlatList
+          {/* Notifications */}
+          <View style={{
+              borderRadius: 12,
+              marginHorizontal: 20,
+              // paddingHorizontal:24,
+              borderColor: colors.border,
+              // alignItems: "center",
+              backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",}}>
+          <FlatList
             data={notifications}
             keyExtractor={(notifications) => notifications.id}
             renderItem={({ item }) => {
-              
-
               return (
-                <View style={{flex :1, }}>
-                  <Text style={{}}>{item.date}</Text>
+           
+                <TouchableOpacity
+                  style={{
+                    flex: 1,
+                    justifyContent: "space-between",
+                    margin:3,
+                  
+                  }}
+                >
+                  <Text style={{ color: "white",margin:7 }}>{item.date}</Text>
                   <View
                     style={{
                       flexDirection: "row",
@@ -304,34 +317,40 @@ const HomeScreen = () => {
                     }}
                   >
                     <View style={{ flexDirection: "row", gap: 5 }}>
-                      <Text>{item.icon}</Text>
-                      <View>
-                        <Text>{item.Title}</Text>
-                        <Text>{item.time}</Text>
+                      {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
+                      <Icons
+                  name="south"
+                  size={24}
+                  color="white"
+                  // style={{ opacity: 0.5 }}
+                />
+                      <View style={{gap:8}}>
+                        <Text style={{ color: "white" }}>{item.Title}</Text>
+                        <Text style={{ color: "white" }}>{item.time}</Text>
                       </View>
                     </View>
-                    <View>
-                      <Text>{item.points}</Text>
-                      <Text>{item.text}</Text>
+                    <View style={{gap:8}}>
+                      <Text style={{ color: "white" }}>{item.points}</Text>
+                      <Text style={{ color: "white" }}>{item.text}</Text>
                     </View>
                   </View>
-                </View>
+                </TouchableOpacity>
+               
               );
             }}
-          /> */}
+          />
+           </View>
 
           {/* notifications card */}
-          {/* <TouchableOpacity
+          <TouchableOpacity
             style={{
               // borderWidth:1,
               borderRadius: 52,
-              marginHorizontal:20,
+              marginHorizontal: 20,
               borderColor: colors.border,
               // backgroundColor: '  rgba(255, 255, 255, 0.14) 100%',
             }}
-          > */}
-
-          {/* </TouchableOpacity> */}
+          ></TouchableOpacity>
 
           {/* list of coins */}
           <WatchList />
