@@ -14,6 +14,7 @@ export type TabsStackParamList = {
   portfolio: undefined;
   browser: undefined;
   settings: undefined;
+  transaction:undefined;
 };
 const TabsNavigator = () => {
   const TabsStack = createBottomTabNavigator<TabsStackParamList>();
@@ -53,7 +54,7 @@ const TabsNavigator = () => {
         }}
       />
       <TabsStack.Screen
-        name="markets"
+        name="transaction"
         component={Transaction}
         options={{
           headerTransparent: true,
@@ -63,6 +64,17 @@ const TabsNavigator = () => {
           },
         }}
       />
+         {/* <TabsStack.Screen
+        name="markets"
+        component={Example}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          tabBarIcon(props) {
+            return <Icons name="bar-chart" {...props} />;
+          },
+        }}
+      /> */}
 
       <TabsStack.Screen
         name="browser"

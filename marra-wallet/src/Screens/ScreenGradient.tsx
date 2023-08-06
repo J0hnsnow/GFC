@@ -2,6 +2,7 @@ import { View, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useHeaderHeight } from '@react-navigation/elements';
 import React, { ReactNode } from 'react';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 interface ScreenGradientProps {
   children: ReactNode;
@@ -14,10 +15,12 @@ const ScreenGradient: React.FC<ScreenGradientProps> = ({ children, headerPadding
   return (
     <LinearGradient
    
+    // colors={[ 'rgba(4,56,115,1) 91.6% )',' rgba(0,85,255,1) 1.5%', ]}
 
-// colors={['black',' rgba(0,0,0,1) 100.2%',' rgba(9,29,85,1) 0.2%','#219BA1','#2675C0','#103F77']}
-// colors={['#219BA1','#2675C0','#103F77']}
-colors={[ 'rgba(4,56,115,1) 91.6% )',' rgba(0,85,255,1) 1.5%', ]}
+
+// colors={['#219BA1','#2675C0','#103F77']
+// colors={[ ' rgba(51,15,176,1) 1.5%','rgba(33,155,161,1) 91.6% )' ]}
+colors={['rgba(93,52,236,1) 100.2%','rgba(62,161,219,1) 11.2%',]}
 
 
       start={{ x: 0.9, y: 0.1 }}

@@ -110,8 +110,8 @@ const HomeScreen = () => {
 
                 alignItems: "center",
                 paddingHorizontal: 24,
-                backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-                // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+                backgroundColor: "rgba(3, 4, 95, 0.2)",
 
                 borderColor: colors.border,
                 // "rgb(122, 49, 111)",
@@ -186,9 +186,9 @@ const HomeScreen = () => {
                   paddingHorizontal: 24,
                   flexDirection: "row",
                   gap: 12,
-                  backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
                   // backgroundColor: "rgb(215, 187, 245)",
-                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  backgroundColor: "rgba(3, 4, 95, 0.2)",
                   // 'rgb(174, 216, 204)',
                   borderColor: colors.border,
                 }}
@@ -226,9 +226,9 @@ const HomeScreen = () => {
                   borderColor: colors.border,
                   gap: 12,
                   // backgroundColor: "rgba(215, 187, 245, 0.5)",
-                  backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
 
-                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  backgroundColor: "rgba(3, 4, 95, 0.2)",
                 }}
               >
                 <Icons
@@ -263,8 +263,8 @@ const HomeScreen = () => {
                   paddingHorizontal: 30,
                   flexDirection: "row",
                   gap: 12,
-                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
-                  backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+                  backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
                   margin: 20,
                   paddingVertical: 14,
                 }}
@@ -294,7 +294,10 @@ const HomeScreen = () => {
               // paddingHorizontal:24,
               borderColor: colors.border,
               // alignItems: "center",
-              backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",}}>
+              // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+              backgroundColor: "rgba(3, 4, 95, 0.2)",
+              }}>
+              
           <FlatList
             data={notifications}
             keyExtractor={(notifications) => notifications.id}
@@ -342,15 +345,7 @@ const HomeScreen = () => {
            </View>
 
           {/* notifications card */}
-          <TouchableOpacity
-            style={{
-              // borderWidth:1,
-              borderRadius: 52,
-              marginHorizontal: 20,
-              borderColor: colors.border,
-              // backgroundColor: '  rgba(255, 255, 255, 0.14) 100%',
-            }}
-          ></TouchableOpacity>
+        
 
           {/* list of coins */}
           <WatchList />

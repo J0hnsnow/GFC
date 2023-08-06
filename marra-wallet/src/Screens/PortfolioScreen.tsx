@@ -34,7 +34,7 @@ const list = [
 const AVATAR_URL =
   "https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp";
 
-const Portfolio = () => {
+const Portfolio = ({ navigation }) => {
   const { colors } = useTheme();
   const [listIndex, setListIndex] = useState(0);
 
@@ -167,7 +167,7 @@ const Portfolio = () => {
                     </Text>
                   </TouchableOpacity>
                 </View>
-+
+
                 {/*swap buttons  */}
                 <View
                   style={{
@@ -274,7 +274,9 @@ const Portfolio = () => {
                 // const isSelected = listIndex === index;
 
                 return (
-                  <View
+                  <TouchableOpacity
+                  
+                  onPress={() => navigation.navigate("transaction")}
                     style={{
                       flexDirection: "row",
                       alignItems: "center",
@@ -328,7 +330,7 @@ const Portfolio = () => {
                         {item.text}
                       </Text>
                     </View>
-                  </View>
+                  </TouchableOpacity>
                 );
               }}
             />

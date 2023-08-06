@@ -13,36 +13,36 @@ import {
   import { useTheme } from "@react-navigation/native";
   import { FontAwesome } from "@expo/vector-icons";
   
-  // const [coins, setCoins] = useState([
-  //   {
-  //     id: "1",
-  //     icon: "icon 1",
-  //     date: "June 28",
-  //     Title: "Divided Currel",
-  //     time: "06.47AM",
-  //     status: "+$0.01",
-  //     text: "0.01 NEAR",
-  //   },
-  //   {
-  //     id: "2",
-  //     icon: "icon 1",
-  //     date: "June 28",
-  //     Title: "Divided Currel",
-  //     time: "06.47AM",
-  //     status: "+$0.01",
-  //     text: "0.01 NEAR",
-  //   },
-  //   {
-  //     id: "3",
-  //     icon: "icon 1",
-  //     date: "June 28",
-  //     Title: "Divided Currel",
-  //     time: "06.47AM",
-  //     status: "+$0.01",
-  //     text: "0.01 NEAR",
-  //   },
+  const notifications = [
+    {
+      id: "1",
+      icon: "icon 1",
+      date: "June 28",
+      Title: "Divided Currel",
+      time: "06.47AM",
+      status: "+$0.01",
+      text: "0.01 NEAR",
+    },
+    {
+      id: "2",
+      icon: "icon 1",
+      date: "June 28",
+      Title: "Divided Currel",
+      time: "06.47AM",
+      status: "+$0.01",
+      text: "0.01 NEAR",
+    },
+    {
+      id: "3",
+      icon: "icon 1",
+      date: "June 28",
+      Title: "Divided Currel",
+      time: "06.47AM",
+      status: "+$0.01",
+      text: "0.01 NEAR",
+    },
    
-  // ]);
+  ];
 
  
   const Transaction= () => {
@@ -136,7 +136,106 @@ import {
               <View>
                 <Text style={{fontWeight:'600',fontSize:16, color: '#fff'}}>Transactions</Text>
 
-              </View>
+              </View> 
+              <View style={{
+              borderRadius: 12,
+              // marginHorizontal: 20,
+              paddingHorizontal:24,
+              borderColor: colors.border,
+              // alignItems: "center",
+              // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+              backgroundColor: 'rgba(3, 4, 95, 0.2)',
+              }}>
+          <FlatList
+            data={notifications}
+            keyExtractor={(notifications) => notifications.id}
+            renderItem={({ item }) => {
+              return (
+           
+                <TouchableOpacity
+                  style={{
+                    flex: 1,
+                    justifyContent: "space-between",
+                    margin:3,
+                  
+                  }}
+                >
+                  <Text style={{ color: "white",margin:7 }}>{item.date}</Text>
+                  <View
+                    style={{
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <View style={{ flexDirection: "row", gap: 5 }}>
+                      {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
+                      <Icons
+                  name="south"
+                  size={24}
+                  color="white"
+                  // borderWidth={2}
+                  // style={{ opacity: 0.5 }}
+                />
+                      <View style={{gap:8}}>
+                        <Text style={{ color: "white" }}>{item.Title}</Text>
+                        <Text style={{ color: "white" }}>{item.time}</Text>
+                      </View>
+                    </View>
+                    <View style={{gap:8}}>
+                      <Text style={{ color: "white" }}>{item.status}</Text>
+                      <Text style={{ color: "white" }}>{item.text}</Text>
+                    </View>
+                  </View>
+                </TouchableOpacity>
+               
+              );
+            }}
+          />
+           </View>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
              
            
           </SafeAreaView>
