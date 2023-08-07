@@ -110,8 +110,8 @@ const HomeScreen = () => {
 
                 alignItems: "center",
                 paddingHorizontal: 24,
-                // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-                backgroundColor: "rgba(3, 4, 95, 0.2)",
+                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                // backgroundColor: "rgba(3, 4, 95, 0.2)",
 
                 borderColor: colors.border,
                 // "rgb(122, 49, 111)",
@@ -263,8 +263,8 @@ const HomeScreen = () => {
                   paddingHorizontal: 30,
                   flexDirection: "row",
                   gap: 12,
-                  backgroundColor: "rgba(3, 4, 95, 0.2)",
-                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
+                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
                   margin: 20,
                   paddingVertical: 14,
                 }}
