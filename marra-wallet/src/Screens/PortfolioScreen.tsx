@@ -79,12 +79,15 @@ const Portfolio = ({ navigation }) => {
               <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
+
+          {/* your porrtfolio card */}
+
           <View style={{ paddingHorizontal: 14, gap: 16, flex: 1 }}>
             <TouchableOpacity
               style={{
                 flex: 1,
 
-                height: 150,
+                // height: 150,
                 borderRadius: 12,
                 borderWidth: 1,
                 borderColor: "gray",
@@ -93,10 +96,10 @@ const Portfolio = ({ navigation }) => {
                 backgroundColor: "rgba(3, 4, 95, 0.2)",
               }}
             >
-              <View style={{ gap: 12 }}>
+              <View style={{ gap:15 }}>
                 <Text
                   style={{
-                    top: 10,
+                    top:10,
                     fontSize: 16,
                     color: "white",
                     paddingHorizontal: 34,
@@ -150,7 +153,7 @@ const Portfolio = ({ navigation }) => {
                       alignItems: "center",
                       paddingHorizontal: 24,
                       flexDirection: "row",
-                      gap: 12,
+                      gap: 2,
                       backgroundColor: "#050730",
                     }}
                   >
@@ -174,7 +177,7 @@ const Portfolio = ({ navigation }) => {
                     flexDirection: "row",
                     paddingHorizontal: 24,
                     paddingVertical: 10,
-                    gap: 10,
+                    gap:12
                   }}
                 >
                   <TouchableOpacity

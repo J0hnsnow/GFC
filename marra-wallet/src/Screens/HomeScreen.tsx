@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
 import Icons from "@expo/vector-icons/MaterialIcons";
@@ -15,6 +15,7 @@ import WatchList from "../components/WatchList/WatchList";
 import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
+
 
 const notifications = [
   {
@@ -52,6 +53,19 @@ const AVATAR_URL =
 const HomeScreen = () => {
   const { colors } = useTheme();
   const [categoryIndex, setCategoryIndex] = useState(0);
+
+//   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+
+// // variables
+// const snapPoints = useMemo(() => ['25%', '50%'], []);
+
+// // callbacks
+// const handlePresentModalPress = useCallback(() => {
+//   bottomSheetModalRef.current?.present();
+// }, []);
+// const handleSheetChanges = useCallback((index: number) => {
+//   console.log('handleSheetChanges', index);
+// }, []);
   return (
     <ScreenGradient>
       <ScrollView>
@@ -67,6 +81,8 @@ const HomeScreen = () => {
               // marginLeft:24,
             }}
           >
+            <TouchableOpacity>
+              
             <Image
               source={{ uri: AVATAR_URL }}
               style={{
@@ -77,6 +93,8 @@ const HomeScreen = () => {
               }}
               resizeMode="cover"
             />
+            </TouchableOpacity>
+            
 
             <TouchableOpacity
               style={{
@@ -243,6 +261,7 @@ const HomeScreen = () => {
                     fontSize: 16,
                     color: "white",
                     fontWeight: "300",
+                    // fontFamily:'PoppinsBold'
                   }}
                 >
                   Request
@@ -368,6 +387,25 @@ const HomeScreen = () => {
             <Text style={{ color: "white" }}>Add Favorites</Text>
           </TouchableOpacity>
         </SafeAreaView>
+        {/* Bottom sheet modal */}
+        {/* <BottomSheetModal
+        snapPoints={["85%"]}
+        index={0}
+        ref={bottomSheetModalRef}
+        // backdropComponent={(props) => <CustomBackdrop {...props} />}
+        backgroundStyle={{
+          borderRadius: 24,
+          backgroundColor: colors.card,
+        }}
+        handleIndicatorStyle={{
+          backgroundColor: colors.primary,
+        }}
+      > */}
+        {/* <View>
+          <Text>Hey HEt</Text>
+        </View>
+      </BottomSheetModal> */}
+
       </ScrollView>
     </ScreenGradient>
   );

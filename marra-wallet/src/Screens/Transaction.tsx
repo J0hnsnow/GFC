@@ -58,7 +58,7 @@ const data = {
       strokeWidth: 2, // optional
     },
   ],
-  legend: ["Rainy Days"], // optional
+  legend: ["Crpto"], // optional
 };
 const chartConfig = {
   backgroundGradientFrom: "rgba(255,255,255,1",
@@ -105,12 +105,12 @@ const Transaction = () => {
 
           <View style={{margin:10}}>
             <Text>Bezier Line Chart</Text>
-            {/* <LineChart
+            <LineChart
               data={data}
-              width={screenWidth}
+              width={320}
               // width={Dimensions.get("window").width}
               
-              height={256}
+              height={250}
             
               verticalLabelRotation={30}
               chartConfig={chartConfig}
@@ -123,7 +123,7 @@ const Transaction = () => {
                 left: 5,
                 right: 5,
               }}
-            /> */}
+            />
           </View>
           {/* Transactions */}
          
@@ -136,7 +136,7 @@ const Transaction = () => {
             </Text>
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
-            >
+            > 
               <Text style={{ fontWeight: "700", color: "white", fontSize: 18 }}>
                 $0.0121
               </Text>
