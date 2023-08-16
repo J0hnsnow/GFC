@@ -15,7 +15,7 @@ import WatchList from "../components/WatchList/WatchList";
 import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
-
+import { BottomSheetModal } from "@gorhom/bottom-sheet";
 
 const notifications = [
   {
@@ -54,18 +54,18 @@ const HomeScreen = () => {
   const { colors } = useTheme();
   const [categoryIndex, setCategoryIndex] = useState(0);
 
-//   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
-// // variables
-// const snapPoints = useMemo(() => ['25%', '50%'], []);
+  // variables
+  const snapPoints = useMemo(() => ["25%", "50%"], []);
 
-// // callbacks
-// const handlePresentModalPress = useCallback(() => {
-//   bottomSheetModalRef.current?.present();
-// }, []);
-// const handleSheetChanges = useCallback((index: number) => {
-//   console.log('handleSheetChanges', index);
-// }, []);
+  // callbacks
+  const handlePresentModalPress = useCallback(() => {
+    bottomSheetModalRef.current?.present();
+  }, []);
+  const handleSheetChanges = useCallback((index: number) => {
+    console.log("handleSheetChanges", index);
+  }, []);
   return (
     <ScreenGradient>
       <ScrollView>
@@ -81,20 +81,18 @@ const HomeScreen = () => {
               // marginLeft:24,
             }}
           >
-            <TouchableOpacity>
-              
-            <Image
-              source={{ uri: AVATAR_URL }}
-              style={{
-                width: 42,
-                aspectRatio: 1,
-                borderRadius: 32,
-                borderColor: "white",
-              }}
-              resizeMode="cover"
-            />
+            <TouchableOpacity onPress={handlePresentModalPress}>
+              <Image
+                source={{ uri: AVATAR_URL }}
+                style={{
+                  width: 42,
+                  aspectRatio: 1,
+                  borderRadius: 32,
+                  borderColor: "white",
+                }}
+                resizeMode="cover"
+              />
             </TouchableOpacity>
-            
 
             <TouchableOpacity
               style={{
@@ -307,7 +305,8 @@ const HomeScreen = () => {
             </View>
           </View>
           {/* Notifications */}
-          <View style={{
+          <View
+            style={{
               borderRadius: 12,
               marginHorizontal: 20,
               // paddingHorizontal:24,
@@ -315,56 +314,54 @@ const HomeScreen = () => {
               // alignItems: "center",
               // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
               backgroundColor: "rgba(3, 4, 95, 0.2)",
-              }}>
-              
-          <FlatList
-            data={notifications}
-            keyExtractor={(notifications) => notifications.id}
-            renderItem={({ item }) => {
-              return (
-           
-                <TouchableOpacity
-                  style={{
-                    flex: 1,
-                    justifyContent: "space-between",
-                    margin:3,
-                  
-                  }}
-                >
-                  <Text style={{ color: "white",margin:7 }}>{item.date}</Text>
-                  <View
+            }}
+          >
+            <FlatList
+              data={notifications}
+              keyExtractor={(notifications) => notifications.id}
+              renderItem={({ item }) => {
+                return (
+                  <TouchableOpacity
                     style={{
-                      flexDirection: "row",
+                      flex: 1,
                       justifyContent: "space-between",
+                      margin: 3,
                     }}
                   >
-                    <View style={{ flexDirection: "row", gap: 5 }}>
-                      {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
-                      <Icons
-                  name="south"
-                  size={24}
-                  color="white"
-                  // style={{ opacity: 0.5 }}
-                />
-                      <View style={{gap:8}}>
-                        <Text style={{ color: "white" }}>{item.Title}</Text>
-                        <Text style={{ color: "white" }}>{item.time}</Text>
+                    <Text style={{ color: "white", margin: 7 }}>
+                      {item.date}
+                    </Text>
+                    <View
+                      style={{
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <View style={{ flexDirection: "row", gap: 5 }}>
+                        {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
+                        <Icons
+                          name="south"
+                          size={24}
+                          color="white"
+                          // style={{ opacity: 0.5 }}
+                        />
+                        <View style={{ gap: 8 }}>
+                          <Text style={{ color: "white" }}>{item.Title}</Text>
+                          <Text style={{ color: "white" }}>{item.time}</Text>
+                        </View>
+                      </View>
+                      <View style={{ gap: 8 }}>
+                        <Text style={{ color: "white" }}>{item.points}</Text>
+                        <Text style={{ color: "white" }}>{item.text}</Text>
                       </View>
                     </View>
-                    <View style={{gap:8}}>
-                      <Text style={{ color: "white" }}>{item.points}</Text>
-                      <Text style={{ color: "white" }}>{item.text}</Text>
-                    </View>
-                  </View>
-                </TouchableOpacity>
-               
-              );
-            }}
-          />
-           </View>
+                  </TouchableOpacity>
+                );
+              }}
+            />
+          </View>
 
           {/* notifications card */}
-        
 
           {/* list of coins */}
           <WatchList />
@@ -388,24 +385,23 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </SafeAreaView>
         {/* Bottom sheet modal */}
-        {/* <BottomSheetModal
-        snapPoints={["85%"]}
-        index={0}
-        ref={bottomSheetModalRef}
-        // backdropComponent={(props) => <CustomBackdrop {...props} />}
-        backgroundStyle={{
-          borderRadius: 24,
-          backgroundColor: colors.card,
-        }}
-        handleIndicatorStyle={{
-          backgroundColor: colors.primary,
-        }}
-      > */}
-        {/* <View>
-          <Text>Hey HEt</Text>
-        </View>
-      </BottomSheetModal> */}
-
+        <BottomSheetModal
+          snapPoints={["85%"]}
+          index={0}
+          ref={bottomSheetModalRef}
+          // backdropComponent={(props) => <CustomBackdrop {...props} />}
+          backgroundStyle={{
+            borderRadius: 24,
+            backgroundColor: colors.card,
+          }}
+          handleIndicatorStyle={{
+            backgroundColor: colors.primary,
+          }}
+        >
+          <View>
+            <Text>Hey HEt</Text>
+          </View>
+        </BottomSheetModal>
       </ScrollView>
     </ScreenGradient>
   );
