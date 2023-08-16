@@ -50,7 +50,7 @@ const notifications = [
 const AVATAR_URL =
   "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const { colors } = useTheme();
   const [categoryIndex, setCategoryIndex] = useState(0);
 
@@ -81,7 +81,11 @@ const HomeScreen = () => {
               // marginLeft:24,
             }}
           >
-            <TouchableOpacity onPress={handlePresentModalPress}>
+            <TouchableOpacity
+              // onPress={handlePresentModalPress}
+
+              onPress={() => navigation.navigate("login")}
+            >
               <Image
                 source={{ uri: AVATAR_URL }}
                 style={{
@@ -386,7 +390,7 @@ const HomeScreen = () => {
         </SafeAreaView>
         {/* Bottom sheet modal */}
         <BottomSheetModal
-          snapPoints={["85%"]}
+          snapPoints={["55%"]}
           index={0}
           ref={bottomSheetModalRef}
           // backdropComponent={(props) => <CustomBackdrop {...props} />}
@@ -399,7 +403,15 @@ const HomeScreen = () => {
           }}
         >
           <View>
-            <Text>Hey HEt</Text>
+            <Text>logn or sign up</Text>
+          </View>
+          <View>
+            <TouchableOpacity>
+              <Text>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>Sign Up</Text>
+            </TouchableOpacity>
           </View>
         </BottomSheetModal>
       </ScrollView>
