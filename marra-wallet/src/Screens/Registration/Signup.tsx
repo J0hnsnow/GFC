@@ -220,7 +220,7 @@ const Signup = ({ navigation }) => {
                   marginHorizontal: 10,
                 }}
               />
-              <Text style={{ fontSize: 14 }}>Or Sign up with</Text>
+              <Text style={{ fontSize: 14,color:'white', }}>Or Sign up with</Text>
               <View
                 style={{
                   flex: 1,

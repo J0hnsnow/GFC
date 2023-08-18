@@ -82,9 +82,9 @@ const HomeScreen = ({ navigation }) => {
             }}
           >
             <TouchableOpacity
-              // onPress={handlePresentModalPress}
+              onPress={handlePresentModalPress}
 
-              onPress={() => navigation.navigate("login")}
+              // onPress={() => navigation.navigate("login")}
             >
               <Image
                 source={{ uri: AVATAR_URL }}
@@ -402,15 +402,53 @@ const HomeScreen = ({ navigation }) => {
             backgroundColor: colors.primary,
           }}
         >
-          <View>
-            <Text>logn or sign up</Text>
+          <View style={{}}>
+            <Text style={{}}>login or sign up</Text>
           </View>
-          <View>
-            <TouchableOpacity>
-              <Text>Login</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              flex: 1,
+              paddingHorizontal: 24,
+              paddingVertical: 24,
+              justifyContent: "space-between",
+            }}
+          >
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Login")}
+              style={{
+                paddingHorizontal: 14,
+                flexDirection: "row",
+                height: 50,
+                width: 100,
+                // paddingVertical:"24",
+
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 22,
+                borderWidth: 1,
+                backgroundColor: "#050730",
+              }}
+            >
+              <Text style={{ color: "white" }}>Login</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text>Sign Up</Text>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Signup")}
+              style={{
+                paddingHorizontal: 14,
+                flexDirection: "row",
+                height: 50,
+                width: 100,
+                // paddingVertical:"24",
+
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: 22,
+                borderWidth: 1,
+                backgroundColor: "#050730",
+              }}
+            >
+              <Text style={{ color: "white" }}>Sign Up</Text>
             </TouchableOpacity>
           </View>
         </BottomSheetModal>

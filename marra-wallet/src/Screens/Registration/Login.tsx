@@ -122,9 +122,9 @@ const Login = ({ navigation }) => {
                   }}
                 >
                   {isPasswordShown == true ? (
-                    <Ionicons name="eye-off" size={24} color="black" />
+                    <Ionicons name="eye-off" size={24} color="white" />
                   ) : (
-                    <Ionicons name="eye" size={24} color="black" />
+                    <Ionicons name="eye" size={24} color="white" />
                   )}
                 </TouchableOpacity>
               </View>
