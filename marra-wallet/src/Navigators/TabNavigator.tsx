@@ -67,7 +67,7 @@ const TabsNavigator = () => {
           },
         }}
       />
-      <TabsStack.Screen
+      {/* <TabsStack.Screen
         name="login"
         component={Login}
         options={{
@@ -77,8 +77,8 @@ const TabsNavigator = () => {
           //   return <Icons name="bar-chart" {...props} />;
           // },
         }}
-      />
-      <TabsStack.Screen
+      /> */}
+      {/* <TabsStack.Screen
         name="signup"
         component={Signup}
         options={{
@@ -88,7 +88,7 @@ const TabsNavigator = () => {
           //   return <Icons name="account-balance-wallet" {...props} />;
           // },
         }}
-      />
+      /> */}
       <TabsStack.Screen
         name="browser"
         component={Example}

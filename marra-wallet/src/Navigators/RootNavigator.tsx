@@ -27,8 +27,20 @@ const RootNavigator = () => {
         }}
       />
       <RootStack.Screen name="details" component={DetailsScreen} />
-      <RootStack.Screen name="signup" component={Signup} />
-      <RootStack.Screen name="login" component={Login} />
+      <RootStack.Screen
+        name="signup"
+        component={Signup}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <RootStack.Screen
+        name="login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
       <RootStack.Screen name="portfolio" component={Portfolio} />
     </RootStack.Navigator>
   );

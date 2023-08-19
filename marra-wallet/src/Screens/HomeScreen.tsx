@@ -390,7 +390,7 @@ const HomeScreen = ({ navigation }) => {
         </SafeAreaView>
         {/* Bottom sheet modal */}
         <BottomSheetModal
-          snapPoints={["55%"]}
+          snapPoints={["45%"]}
           index={0}
           ref={bottomSheetModalRef}
           // backdropComponent={(props) => <CustomBackdrop {...props} />}
@@ -403,53 +403,53 @@ const HomeScreen = ({ navigation }) => {
           }}
         >
           <View style={{}}>
-            <Text style={{}}>login or sign up</Text>
-          </View>
-          <View
-            style={{
-              flexDirection: "row",
-              flex: 1,
-              paddingHorizontal: 24,
-              paddingVertical: 24,
-              justifyContent: "space-between",
-            }}
-          >
-            <TouchableOpacity
-              onPress={() => navigation.navigate("Login")}
-              style={{
-                paddingHorizontal: 14,
-                flexDirection: "row",
-                height: 50,
-                width: 100,
-                // paddingVertical:"24",
+            <View style={{ gap: 24, paddingHorizontal: 24 }}>
+              <Text style={{ left: 50, fontSize: 16, fontWeight: "700" }}>
+                WELCOME TO MARRA WALLET
+              </Text>
+              <Text style={{ fontSize: 16 }}>Please Sign in</Text>
 
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 22,
-                borderWidth: 1,
-                backgroundColor: "#050730",
-              }}
-            >
-              <Text style={{ color: "white" }}>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() => navigation.navigate("Signup")}
-              style={{
-                paddingHorizontal: 14,
-                flexDirection: "row",
-                height: 50,
-                width: 100,
-                // paddingVertical:"24",
+              <TouchableOpacity
+                onPress={() => navigation.navigate("login")}
+                style={{
+                  paddingHorizontal: 14,
+                  flexDirection: "row",
+                  height: 50,
+                  width: 300,
+                  // paddingVertical:"24",
 
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 22,
-                borderWidth: 1,
-                backgroundColor: "#050730",
-              }}
-            >
-              <Text style={{ color: "white" }}>Sign Up</Text>
-            </TouchableOpacity>
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 22,
+                  borderWidth: 1,
+                  backgroundColor: "#050730",
+                }}
+              >
+                <Text style={{ color: "white" }}>Login</Text>
+              </TouchableOpacity>
+
+              <Text style={{ fontSize: 16 }}>
+                You don't have an account? Please sign up
+              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("signup")}
+                style={{
+                  paddingHorizontal: 14,
+                  flexDirection: "row",
+                  height: 50,
+                  width: 300,
+                  // paddingVertical:"24",
+
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 22,
+                  borderWidth: 1,
+                  backgroundColor: "#050730",
+                }}
+              >
+                <Text style={{ color: "white" }}>Sign Up</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </BottomSheetModal>
       </ScrollView>
@@ -458,58 +458,3 @@ const HomeScreen = ({ navigation }) => {
 };
 
 export default HomeScreen;
-
-const Card = () => {
-  return (
-    <View
-      style={{
-        flex: 1,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between",
-        paddingHorizontal: 24,
-        backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-        borderRadius: 12,
-        // backgroundColor: "rgba(3, 4, 95, 0.2)",
-        // borderWidth: 1,
-        // borderColor: "gray",
-        // borderRadius:22
-      }}
-    >
-      <View
-        style={{
-          alignItems: "center",
-          paddingHorizontal: 5,
-          flexDirection: "row",
-        }}
-      >
-        <Icons
-          name="south"
-          size={24}
-          color="white"
-          style={{ paddingHorizontal: 24 }}
-        />
-        <View style={{ paddingVertical: 14, paddingHorizontal: 24 }}>
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: 16,
-              color: "white",
-              // opacity: 0.5,
-            }}
-          >
-            Score
-          </Text>
-          <Text style={{ fontSize: 14, color: "white", opacity: 0.5 }}>
-            03:09pm
-          </Text>
-        </View>
-      </View>
-      {/* last price */}
-      <View>
-        <Text style={{ fontSize: 18, color: "white" }}>5 points</Text>
-        <Text style={{ color: "white", opacity: 0.5 }}>Daily Open</Text>
-      </View>
-    </View>
-  );
-};
