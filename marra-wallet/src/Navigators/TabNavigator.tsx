@@ -7,6 +7,8 @@ import { FontAwesome } from "@expo/vector-icons";
 import PortfolioScreen from "../Screens/PortfolioScreen";
 import SettingScreen from "../Screens/SettingScreen";
 import Transaction from "../Screens/Transaction";
+import Login from "../Screens/Registration/Login";
+import Signup from "../Screens/Registration/Signup";
 
 export type TabsStackParamList = {
   home: undefined;
@@ -14,6 +16,9 @@ export type TabsStackParamList = {
   portfolio: undefined;
   browser: undefined;
   settings: undefined;
+  transaction: undefined;
+  login: undefined;
+  signup: undefined;
 };
 const TabsNavigator = () => {
   const TabsStack = createBottomTabNavigator<TabsStackParamList>();
@@ -24,9 +29,8 @@ const TabsNavigator = () => {
         tabBarStyle: {
           position: "absolute",
           bottom: 30,
-          marginHorizontal:50,
-          borderRadius:32
-
+          marginHorizontal: 50,
+          borderRadius: 32,
         },
       }}
     >
@@ -53,7 +57,7 @@ const TabsNavigator = () => {
         }}
       />
       <TabsStack.Screen
-        name="markets"
+        name="transaction"
         component={Transaction}
         options={{
           headerTransparent: true,
@@ -63,7 +67,28 @@ const TabsNavigator = () => {
           },
         }}
       />
-
+      {/* <TabsStack.Screen
+        name="login"
+        component={Login}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          // tabBarIcon(props) {
+          //   return <Icons name="bar-chart" {...props} />;
+          // },
+        }}
+      /> */}
+      {/* <TabsStack.Screen
+        name="signup"
+        component={Signup}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          // tabBarIcon(props) {
+          //   return <Icons name="account-balance-wallet" {...props} />;
+          // },
+        }}
+      /> */}
       <TabsStack.Screen
         name="browser"
         component={Example}

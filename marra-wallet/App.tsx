@@ -9,6 +9,8 @@ import {
 import RootNavigator from "./src/Navigators/RootNavigator";
 import { useMemo } from "react";
 import { color } from "react-native-reanimated";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 
 export default function App() {
   const theme: Theme = useMemo(
@@ -20,26 +22,26 @@ export default function App() {
         primary: "#E7007D",
         text: "black",
         border: "#D9D9D9",
-        
       },
     }),
     []
   );
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <NavigationContainer theme={theme}>
-        <RootNavigator />
-        <StatusBar />
+        <BottomSheetModalProvider>
+          <RootNavigator />
+        </BottomSheetModalProvider>
+        {/* <StatusBar style={colorScheme === "dark" ? "light" : "dark"} /> */}
         <StatusBar style="dark" />
       </NavigationContainer>
-    </View>
+    </GestureHandlerRootView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
-  
+    flex: 1,
   },
   // background: {
   //   flex:1,
