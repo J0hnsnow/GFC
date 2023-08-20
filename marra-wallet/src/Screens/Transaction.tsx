@@ -83,9 +83,8 @@ const Transaction = () => {
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 12, gap: 4 }}>
-
-{/* header */}
-<View
+          {/* header */}
+          <View
             style={{
               paddingHorizontal: 24,
               // paddingVertical: 24,
@@ -103,7 +102,7 @@ const Transaction = () => {
 
           {/* Chart  */}
 
-          <View style={{margin:10}}>
+          {/* <View style={{margin:10}}>
             <Text>Bezier Line Chart</Text>
             <LineChart
               data={data}
@@ -124,9 +123,9 @@ const Transaction = () => {
                 right: 5,
               }}
             />
-          </View>
+          </View> */}
           {/* Transactions */}
-         
+
           <View style={{ paddingHorizontal: 24, gap: 8 }}>
             <Text style={{ fontWeight: "700", fontSize: 18, color: "white" }}>
               Information
@@ -136,7 +135,7 @@ const Transaction = () => {
             </Text>
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
-            > 
+            >
               <Text style={{ fontWeight: "700", color: "white", fontSize: 18 }}>
                 $0.0121
               </Text>

@@ -16,7 +16,7 @@ import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
-
+// notifications data
 const notifications = [
   {
     id: "1",
@@ -46,7 +46,7 @@ const notifications = [
     text: "4.40 NEAR",
   },
 ];
-
+//profile image
 const AVATAR_URL =
   "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
@@ -70,6 +70,7 @@ const HomeScreen = ({ navigation }) => {
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
+          {/* nav */}
           <View
             style={{
               paddingHorizontal: 24,
@@ -119,6 +120,7 @@ const HomeScreen = ({ navigation }) => {
               <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
+          {/* portfolio card on the homescreen */}
           <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
             <TouchableOpacity
               style={{
@@ -185,7 +187,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <View>
-            {/* add request */}
+            {/* add request buttons */}
 
             <View
               style={{
@@ -272,6 +274,7 @@ const HomeScreen = ({ navigation }) => {
             </View>
 
             <View>
+              {/* pay and transfer card */}
               <TouchableOpacity
                 style={{
                   flex: 1,
@@ -308,7 +311,7 @@ const HomeScreen = ({ navigation }) => {
               </TouchableOpacity>
             </View>
           </View>
-          {/* Notifications */}
+          {/* Notifications card */}
           <View
             style={{
               borderRadius: 12,
@@ -365,7 +368,7 @@ const HomeScreen = ({ navigation }) => {
             />
           </View>
 
-          {/* notifications card */}
+          {/* notifications card end*/}
 
           {/* list of coins */}
           <WatchList />
