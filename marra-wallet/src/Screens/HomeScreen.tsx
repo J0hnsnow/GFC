@@ -116,7 +116,9 @@ const HomeScreen = ({ navigation }) => {
                 // borderColor:colors.border,
               }}
             >
-              <Text style={{ color: "white" }}>Balance $</Text>
+              <Text style={{ color: "white", fontFamily: "Open Sans" }}>
+                Balance $
+              </Text>
               <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
@@ -370,7 +372,7 @@ const HomeScreen = ({ navigation }) => {
 
           {/* notifications card end*/}
 
-          {/* list of coins */}
+          {/* coins card */}
           <WatchList />
 
           <TouchableOpacity
