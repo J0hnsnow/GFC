@@ -17,15 +17,19 @@ const ScreenGradient: React.FC<ScreenGradientProps> = ({
 
   return (
     <LinearGradient
-      // "#5D9FFF", "#6BBBFF"
-      // colors={[ 'rgba(4,56,115,1) 91.6% )',' rgba(0,85,255,1) 1.5%', ]}
-      //  rgba(86,89,218,1) 0%, rgba(95,208,248,1) 90% );
-      // colors={["#87ceeb", "#87cefa"]}
-      colors={[" rgba(86,89,218,1) 0%, ", "rgba(95,208,248,1) 90%"]}
+      colors={[
+        // "rgba(37,47,152,1)30% ",
+        "#0455bf",
+        // "#1e69cb",
+        // "#2d78db",
+        "#438ef2",
+
+        " rgba(4,249,242,1) 50%, ",
+      ]}
       // colors={[ ' rgba(51,15,176,1) 1.5%','rgba(33,155,161,1) 91.6% )' ]}
       // colors={['rgba(93,52,236,1) 100.2%','rgba(62,161,219,1) 11.2%',]}
 
-      start={{ x: 0.9, y: 0.1 }}
+      start={{ x: 0.1, y: 0.1 }}
       style={{
         flex: 1,
 

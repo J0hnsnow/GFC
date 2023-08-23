@@ -42,7 +42,7 @@ const Portfolio = ({ navigation }) => {
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
-        <View
+          <View
             style={{
               paddingHorizontal: 24,
               paddingVertical: 24,
@@ -75,8 +75,10 @@ const Portfolio = ({ navigation }) => {
                 // borderColor:colors.border,
               }}
             >
-              <Text style={{ color: "white" }}>Balance $</Text>
-              <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
+              <Text style={{ color: "white", fontFamily: "Regular" }}>
+                Balance $
+              </Text>
+              <Text style={{ color: "white", fontFamily: "Bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
 
@@ -87,7 +89,7 @@ const Portfolio = ({ navigation }) => {
               style={{
                 flex: 1,
 
-                // height: 150,
+                height: 200,
                 borderRadius: 12,
                 borderWidth: 1,
                 borderColor: "gray",
@@ -96,13 +98,14 @@ const Portfolio = ({ navigation }) => {
                 backgroundColor: "rgba(3, 4, 95, 0.2)",
               }}
             >
-              <View style={{ gap:15 }}>
+              <View style={{ gap: 15 }}>
                 <Text
                   style={{
-                    top:10,
+                    top: 10,
                     fontSize: 16,
                     color: "white",
                     paddingHorizontal: 34,
+                    fontFamily: "Regular",
 
                     // opacity: 0.5,
                   }}
@@ -126,6 +129,7 @@ const Portfolio = ({ navigation }) => {
                     style={{
                       fontSize: 24,
                       color: "white",
+                      fontFamily: "Regular",
 
                       // opacity: 0.5,
                     }}
@@ -144,8 +148,8 @@ const Portfolio = ({ navigation }) => {
                   <TouchableOpacity
                     style={{
                       flex: 1,
-                      width: 150,
-                      // height: 80,
+                      width: 200,
+                      height: 200,
 
                       borderRadius: 12,
                       borderWidth: 1,
@@ -159,14 +163,14 @@ const Portfolio = ({ navigation }) => {
                   >
                     <Text
                       style={{
-                        fontWeight: "bold",
-                        fontSize: 14,
+                        fontFamily: "Regular",
+                        fontSize: 16,
                         color: "#F61491",
 
                         // opacity: 0.5,
                       }}
                     >
-                      -$0.04 (-4.19%)                                                
+                      -$0.04 (-4.19%)
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -177,7 +181,7 @@ const Portfolio = ({ navigation }) => {
                     flexDirection: "row",
                     paddingHorizontal: 24,
                     paddingVertical: 10,
-                    gap:12
+                    gap: 12,
                   }}
                 >
                   <TouchableOpacity
@@ -207,6 +211,7 @@ const Portfolio = ({ navigation }) => {
                         flex: 1,
                         fontSize: 18,
                         color: "white",
+                        fontFamily: "Regular",
                         // opacity: 0.5,
                       }}
                     >
@@ -241,6 +246,7 @@ const Portfolio = ({ navigation }) => {
                         flex: 1,
                         fontSize: 18,
                         color: "white",
+                        fontFamily: "Regular",
                       }}
                     >
                       Swap
@@ -278,8 +284,7 @@ const Portfolio = ({ navigation }) => {
 
                 return (
                   <TouchableOpacity
-                  
-                  onPress={() => navigation.navigate("transaction")}
+                    onPress={() => navigation.navigate("transaction")}
                     style={{
                       flexDirection: "row",
                       alignItems: "center",
@@ -305,7 +310,7 @@ const Portfolio = ({ navigation }) => {
                       <View style={{ flexDirection: "row" }}>
                         <Text
                           style={{
-                            fontWeight: "bold",
+                            fontFamily: "Bold",
                             fontSize: 16,
                             color: "white",
                             // opacity: 0.5,
@@ -314,7 +319,12 @@ const Portfolio = ({ navigation }) => {
                           {item.title}
                         </Text>
                         <Text
-                          style={{ fontSize: 14, color: "white", opacity: 0.5 }}
+                          style={{
+                            fontSize: 16,
+                            color: "white",
+                            opacity: 0.5,
+                            fontFamily: "Regular",
+                          }}
                         >
                           {item.shortTitle}
                         </Text>
@@ -324,9 +334,9 @@ const Portfolio = ({ navigation }) => {
                     <View>
                       <Text
                         style={{
-                          fontWeight: "bold",
                           fontSize: 16,
                           color: "white",
+                          fontFamily: "Bold",
                           // opacity: 0.5,
                         }}
                       >
@@ -370,11 +380,18 @@ const Card = () => {
           }}
         />
         <View>
-          <Text style={{ fontSize: 16, fontWeight: "700", color: "white" }}>
+          <Text style={{ fontSize: 16, fontFamily: "Regular", color: "white" }}>
             {" "}
             Near
           </Text>
-          <Text style={{ color: "white", opacity: 0.5, fontSize: 16 }}>
+          <Text
+            style={{
+              color: "white",
+              opacity: 0.5,
+              fontSize: 16,
+              fontFamily: "Regular",
+            }}
+          >
             {" "}
             0.61 . $1.5
           </Text>
@@ -382,8 +399,15 @@ const Card = () => {
       </View>
 
       <View>
-        <Text style={{ fontSize: 16, color: "white" ,left:68 , fontWeight:'700'}}>$0.92</Text>
-        <Text style={{ fontSize: 16, color: "#F61491" }}> -$0.04 .-4.37%</Text>
+        <Text
+          style={{ fontSize: 16, color: "white", left: 68, fontFamily: "Bold" }}
+        >
+          $0.92
+        </Text>
+        <Text style={{ fontSize: 16, color: "#F61491", fontFamily: "Regular" }}>
+          {" "}
+          -$0.04 .-4.37%
+        </Text>
       </View>
     </View>
   );

@@ -91,7 +91,7 @@ const SettingScreen = () => {
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
           <View style={{ paddingHorizontal: 24 }}>
-            <Text style={{ color: "white", fontWeight: "700", fontSize: 16 }}>
+            <Text style={{ color: "white", fontFamily: "Bold", fontSize: 16 }}>
               Settings
             </Text>
           </View>
@@ -134,7 +134,7 @@ const SettingScreen = () => {
                     <View style={{ width: 300 }}>
                       <Text
                         style={{
-                          fontWeight: "bold",
+                          fontFamily: "Bold",
                           fontSize: 16,
                           // color: "white",
                           color: isSelected ? "#F61491" : "white",
@@ -144,7 +144,12 @@ const SettingScreen = () => {
                         {item.title}
                       </Text>
                       <Text
-                        style={{ fontSize: 16, color: "white",  opacity: isSelected ? 1: 0.5,}}
+                        style={{
+                          fontSize: 16,
+                          color: "white",
+                          opacity: isSelected ? 1 : 0.5,
+                          fontFamily: "Regular",
+                        }}
                       >
                         {item.shortTitle}
                       </Text>
