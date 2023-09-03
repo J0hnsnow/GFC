@@ -9,6 +9,7 @@ import SettingScreen from "../Screens/SettingScreen";
 import Transaction from "../Screens/Transaction";
 import Login from "../Screens/Registration/Login";
 import Signup from "../Screens/Registration/Signup";
+import SwapScreen from "../Screens/SwapScreen";
 
 export type TabsStackParamList = {
   home: undefined;
@@ -91,7 +92,7 @@ const TabsNavigator = () => {
       /> */}
       <TabsStack.Screen
         name="browser"
-        component={Example}
+        component={SwapScreen}
         options={{
           headerTransparent: true,
           headerShown: false,
