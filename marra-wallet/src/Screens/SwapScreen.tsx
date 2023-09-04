@@ -40,7 +40,7 @@ const SwapScreen = () => {
               }}
             >
               <Text style={{ color: "white", fontFamily: "Bold" }}>Swap</Text>
-              <Text style={{ color: "purple", fontFamily: "Regular" }}>
+              <Text style={{ color: "white", fontFamily: "Regular" }}>
                 Trade Token in an instance
               </Text>
 
@@ -55,38 +55,38 @@ const SwapScreen = () => {
                 }}
               >
                 <Icons
-                  name="attach-money"
+                  name="monetization-on"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
 
                 <Icons
-                  name="attach-money"
+                  name="bar-chart"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
                 <Icons
-                  name="attach-money"
+                  name="local-fire-department"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
                 <Icons
-                  name="attach-money"
+                  name="settings"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
                 <Icons
-                  name="attach-money"
+                  name="update"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
                 <Icons
-                  name="attach-money"
+                  name="cached"
                   size={28}
                   color="#35d6ed"
                   // style={{ opacity: 0.5 }}
@@ -117,7 +117,7 @@ const SwapScreen = () => {
                     />
                   </View>
                   <Icons
-                    name="compare-arrows"
+                    name="content-copy"
                     size={28}
                     color="#35d6ed"
                     style={{}}
@@ -139,7 +139,7 @@ const SwapScreen = () => {
                       flexDirection: "row",
 
                       //   backgroundColor: "rgba(3, 4, 95, 0.2)",
-                      backgroundColor: "#800080",
+                      backgroundColor: "#fff",
                       // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
                       marginHorizontal: 2,
                       paddingVertical: 14,
@@ -216,7 +216,7 @@ const SwapScreen = () => {
                     />
                   </View>
                   <Icons
-                    name="compare-arrows"
+                    name="content-copy"
                     size={28}
                     color="#35d6ed"
                     style={{}}
@@ -238,7 +238,7 @@ const SwapScreen = () => {
                       flexDirection: "row",
 
                       //   backgroundColor: "rgba(3, 4, 95, 0.2)",
-                      backgroundColor: "#800080",
+                      backgroundColor: "#fff",
                       // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
                       marginHorizontal: 2,
                       paddingVertical: 14,
