@@ -28,8 +28,8 @@ const TabsNavigator = () => {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: "relative",
-          bottom: 10,
+          position: "absolute",
+          bottom: 50,
           marginHorizontal: 50,
           borderRadius: 32,
         },

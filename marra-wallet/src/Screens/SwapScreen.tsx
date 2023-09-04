@@ -97,8 +97,23 @@ const SwapScreen = () => {
           </View>
           {/* icons */}
           {/* first container */}
-          <View>
-            <View>
+          <View
+            style={{
+              flex: 1,
+              alignContent: "center",
+
+              // width: 300,
+              // height:120,
+              borderRadius: 12,
+              // borderWidth: 1,
+              borderColor: colors.border,
+              paddingHorizontal: 24,
+              paddingVertical: 14,
+
+              backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
+            }}
+          >
+            <View style={{}}>
               <View style={{ flexDirection: "row" }}>
                 <Icons
                   name="compare-arrows"
@@ -125,10 +140,10 @@ const SwapScreen = () => {
                   style={{ paddingHorizontal: 24 }}
                 />
               </View>
-              <View style={{ gap: 10 }}>
+              <View style={{ gap: 24 }}>
                 <TouchableOpacity
                   style={{
-                    // flex: 1,
+                    flex: 1,
                     //   width: 300,
                     top: 10,
                     height: 80,
@@ -171,10 +186,11 @@ const SwapScreen = () => {
                     paddingHorizontal: 30,
                     flexDirection: "row",
                     // left: 70,
-                    top: 10,
+                    // top: 10,
+                    // bottom: 10,
 
                     // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
-                    backgroundColor: "#ED7014",
+                    backgroundColor: "#050730",
 
                     paddingVertical: 14,
                   }}
@@ -194,7 +210,22 @@ const SwapScreen = () => {
             </View>
           </View>
           {/* Second container */}
-          <View>
+          <View
+            style={{
+              flex: 1,
+              alignContent: "center",
+
+              // width: 300,
+              // height:120,
+              borderRadius: 12,
+              // borderWidth: 1,
+              borderColor: colors.border,
+              paddingHorizontal: 24,
+              paddingVertical: 14,
+
+              backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
+            }}
+          >
             <View>
               <View style={{ flexDirection: "row" }}>
                 <Icons
@@ -222,10 +253,10 @@ const SwapScreen = () => {
                   style={{ paddingHorizontal: 24 }}
                 />
               </View>
-              <View style={{ gap: 10 }}>
+              <View style={{ gap: 24 }}>
                 <TouchableOpacity
                   style={{
-                    // flex: 1,
+                    flex: 1,
                     //   width: 300,
                     top: 10,
                     height: 80,
@@ -268,9 +299,8 @@ const SwapScreen = () => {
                     paddingHorizontal: 30,
                     flexDirection: "row",
                     // left: 70,
-                    top: 10,
 
-                    backgroundColor: "#ED7014",
+                    backgroundColor: "#050730",
                     // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
                     // marginHorizontal: 20,
                     paddingVertical: 14,
@@ -318,9 +348,9 @@ const SwapScreen = () => {
                 paddingHorizontal: 30,
                 flexDirection: "row",
 
-                backgroundColor: "#ED7014",
+                backgroundColor: "#050730",
                 // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
-                // marginHorizontal: 10,
+
                 paddingVertical: 14,
               }}
             >
