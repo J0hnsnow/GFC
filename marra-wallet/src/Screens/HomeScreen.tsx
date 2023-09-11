@@ -16,6 +16,7 @@ import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import CustomBackdrop from "../components/WatchList/CustomBackdrop";
 // notifications data
 const notifications = [
   {
@@ -420,7 +421,7 @@ const HomeScreen = ({ navigation }) => {
           snapPoints={["45%"]}
           index={0}
           ref={bottomSheetModalRef}
-          // backdropComponent={(props) => <CustomBackdrop {...props} />}
+          backdropComponent={(props) => <CustomBackdrop {...props} />}
           backgroundStyle={{
             borderRadius: 24,
             backgroundColor: colors.card,
