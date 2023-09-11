@@ -16,6 +16,7 @@ import ScreenGradient from "./ScreenGradient";
 import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
+import CustomBackdrop from "../components/WatchList/CustomBackdrop";
 // notifications data
 const notifications = [
   {
@@ -52,6 +53,7 @@ const AVATAR_URL =
 
 const HomeScreen = ({ navigation }) => {
   const { colors } = useTheme();
+
   const [categoryIndex, setCategoryIndex] = useState(0);
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -110,16 +112,17 @@ const HomeScreen = ({ navigation }) => {
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: 22,
-                borderWidth: 1,
-                backgroundColor: "#050730",
+                // borderWidth: 1,
+                // backgroundColor: "#050730",
+                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
 
                 // borderColor:colors.border,
               }}
             >
-              <Text style={{ color: "white", fontFamily: "Open Sans" }}>
+              <Text style={{ color: "white", fontFamily: "Regular" }}>
                 Balance $
               </Text>
-              <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
+              <Text style={{ color: "white", fontFamily: "Bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
           {/* portfolio card on the homescreen */}
@@ -148,7 +151,7 @@ const HomeScreen = ({ navigation }) => {
                     // fontSize: 12,
                     color: "white",
                     left: 24,
-                    fontWeight: "300",
+                    fontFamily: "Medium",
                     // opacity: 0.5,
                   }}
                 >
@@ -157,8 +160,8 @@ const HomeScreen = ({ navigation }) => {
                 <View style={{ flexDirection: "row", gap: 10 }}>
                   <Icons
                     name="attach-money"
-                    size={24}
-                    color="white"
+                    size={28}
+                    color="#35d6ed"
                     // style={{ opacity: 0.5 }}
                   />
                   <Text
@@ -166,7 +169,7 @@ const HomeScreen = ({ navigation }) => {
                       flex: 1,
                       fontSize: 24,
                       color: "white",
-                      fontWeight: "bold",
+                      fontFamily: "Bold",
                       // opacity: 0.5,
                     }}
                   >
@@ -180,7 +183,7 @@ const HomeScreen = ({ navigation }) => {
                     // opacity: 0.5,
                     paddingHorizontal: 24,
                     // bottom: 10,
-                    fontWeight: "300",
+                    fontFamily: "Medium",
                   }}
                 >
                   Monthly Profit
@@ -220,7 +223,7 @@ const HomeScreen = ({ navigation }) => {
                 <Icons
                   name="add-circle"
                   size={24}
-                  color="white"
+                  color="#35d6ed"
                   // style={{ opacity: 0.5 }}
                 />
                 <Text
@@ -228,7 +231,7 @@ const HomeScreen = ({ navigation }) => {
                     flex: 1,
                     fontSize: 16,
                     color: "white",
-                    fontWeight: "300",
+                    fontFamily: "Regular",
                     // opacity: 0.5,
                   }}
                 >
@@ -257,8 +260,9 @@ const HomeScreen = ({ navigation }) => {
               >
                 <Icons
                   name="cached"
-                  size={24}
-                  color="white"
+                  size={28}
+                  color="#35d6ed"
+                  fontFamily="Regular"
                   // style={{ opacity: 0.5 }}
                 />
                 <Text
@@ -266,7 +270,7 @@ const HomeScreen = ({ navigation }) => {
                     flex: 1,
                     fontSize: 16,
                     color: "white",
-                    fontWeight: "300",
+                    fontFamily: "Regular",
                     // fontFamily:'PoppinsBold'
                   }}
                 >
@@ -297,8 +301,8 @@ const HomeScreen = ({ navigation }) => {
               >
                 <Icons
                   name="compare-arrows"
-                  size={24}
-                  color="white"
+                  size={28}
+                  color="#35d6ed"
                   style={{ paddingHorizontal: 24 }}
                 />
                 <Text
@@ -306,6 +310,7 @@ const HomeScreen = ({ navigation }) => {
                     flex: 1,
                     fontSize: 18,
                     color: "white",
+                    fontFamily: "Regular",
                   }}
                 >
                   Pay & transfer
@@ -350,18 +355,34 @@ const HomeScreen = ({ navigation }) => {
                         {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
                         <Icons
                           name="south"
-                          size={24}
-                          color="white"
+                          size={28}
+                          color="#35d6ed"
                           // style={{ opacity: 0.5 }}
                         />
                         <View style={{ gap: 8 }}>
-                          <Text style={{ color: "white" }}>{item.Title}</Text>
-                          <Text style={{ color: "white" }}>{item.time}</Text>
+                          <Text
+                            style={{
+                              color: "white",
+                              fontFamily: "Regular",
+                              fontSize: 14,
+                            }}
+                          >
+                            {item.Title}
+                          </Text>
+                          <Text
+                            style={{ color: "white", fontFamily: "Regular" }}
+                          >
+                            {item.time}
+                          </Text>
                         </View>
                       </View>
                       <View style={{ gap: 8 }}>
-                        <Text style={{ color: "white" }}>{item.points}</Text>
-                        <Text style={{ color: "white" }}>{item.text}</Text>
+                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                          {item.points}
+                        </Text>
+                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                          {item.text}
+                        </Text>
                       </View>
                     </View>
                   </TouchableOpacity>
@@ -390,7 +411,9 @@ const HomeScreen = ({ navigation }) => {
               // borderColor:colors.border,
             }}
           >
-            <Text style={{ color: "white" }}>Add Favorites</Text>
+            <Text style={{ color: "white", fontFamily: "Regular" }}>
+              Add Favorites
+            </Text>
           </TouchableOpacity>
         </SafeAreaView>
         {/* Bottom sheet modal */}
@@ -398,7 +421,7 @@ const HomeScreen = ({ navigation }) => {
           snapPoints={["45%"]}
           index={0}
           ref={bottomSheetModalRef}
-          // backdropComponent={(props) => <CustomBackdrop {...props} />}
+          backdropComponent={(props) => <CustomBackdrop {...props} />}
           backgroundStyle={{
             borderRadius: 24,
             backgroundColor: colors.card,
@@ -409,10 +432,12 @@ const HomeScreen = ({ navigation }) => {
         >
           <View style={{}}>
             <View style={{ gap: 24, paddingHorizontal: 24 }}>
-              <Text style={{ left: 50, fontSize: 16, fontWeight: "700" }}>
+              <Text style={{ left: 50, fontSize: 16, fontFamily: "Regular" }}>
                 WELCOME TO MARRA WALLET
               </Text>
-              <Text style={{ fontSize: 16 }}>Please Sign in</Text>
+              <Text style={{ fontSize: 16, fontFamily: "Regular" }}>
+                Please Sign in
+              </Text>
 
               <TouchableOpacity
                 onPress={() => navigation.navigate("login")}
@@ -430,7 +455,9 @@ const HomeScreen = ({ navigation }) => {
                   backgroundColor: "#050730",
                 }}
               >
-                <Text style={{ color: "white" }}>Login</Text>
+                <Text style={{ color: "white", fontFamily: "Regular" }}>
+                  Login
+                </Text>
               </TouchableOpacity>
 
               <Text style={{ fontSize: 16 }}>
@@ -452,7 +479,9 @@ const HomeScreen = ({ navigation }) => {
                   backgroundColor: "#050730",
                 }}
               >
-                <Text style={{ color: "white" }}>Sign Up</Text>
+                <Text style={{ color: "white", fontFamily: "Regular" }}>
+                  Sign Up
+                </Text>
               </TouchableOpacity>
             </View>
           </View>

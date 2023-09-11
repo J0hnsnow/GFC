@@ -97,7 +97,9 @@ const Transaction = () => {
           >
             <Icons name="east" size={24} color={"white"} />
 
-            <Text style={{ color: "white" }}>Overview</Text>
+            <Text style={{ color: "white", fontFamily: "Regular" }}>
+              Overview
+            </Text>
           </View>
 
           {/* Chart  */}
@@ -127,19 +129,37 @@ const Transaction = () => {
           {/* Transactions */}
 
           <View style={{ paddingHorizontal: 24, gap: 8 }}>
-            <Text style={{ fontWeight: "700", fontSize: 18, color: "white" }}>
+            <Text
+              style={{ fontSize: 18, color: "white", fontFamily: "Regular" }}
+            >
               Information
             </Text>
-            <Text style={{ opacity: 0.5, color: "white", fontSize: 16 }}>
+            <Text
+              style={{
+                opacity: 0.5,
+                color: "white",
+                fontSize: 16,
+                fontFamily: "Regular",
+              }}
+            >
               Interest paid
             </Text>
             <View
               style={{ flexDirection: "row", justifyContent: "space-between" }}
             >
-              <Text style={{ fontWeight: "700", color: "white", fontSize: 18 }}>
+              <Text
+                style={{ fontFamily: "Regular", color: "white", fontSize: 18 }}
+              >
                 $0.0121
               </Text>
-              <Text style={{ opacity: 0.5, color: "white", fontSize: 18 }}>
+              <Text
+                style={{
+                  opacity: 0.5,
+                  color: "white",
+                  fontSize: 18,
+                  fontFamily: "Regular",
+                }}
+              >
                 0.008 NEAR
               </Text>
             </View>
@@ -153,10 +173,24 @@ const Transaction = () => {
             }}
           >
             <View>
-              <Text style={{ opacity: 0.5, color: "white", fontSize: 16 }}>
+              <Text
+                style={{
+                  opacity: 0.5,
+                  color: "white",
+                  fontSize: 14,
+                  fontFamily: "Regular",
+                }}
+              >
                 Interest paid
               </Text>
-              <Text style={{ fontWeight: "700", color: "white", fontSize: 18 }}>
+              <Text
+                style={{
+                  fontWeight: "700",
+                  color: "white",
+                  fontSize: 14,
+                  fontFamily: "Regular",
+                }}
+              >
                 $0.0121
               </Text>
             </View>
@@ -171,7 +205,15 @@ const Transaction = () => {
                 backgroundColor: colors.primary,
               }}
             >
-              <Text style={{ fontWeight: "700", color: "white" }}>Claim</Text>
+              <Text
+                style={{
+                  fontWeight: "700",
+                  color: "white",
+                  fontFamily: "Regular",
+                }}
+              >
+                Claim
+              </Text>
             </TouchableOpacity>
           </View>
 
@@ -206,6 +248,7 @@ const Transaction = () => {
                   fontSize: 14,
                   color: "white",
                   height: 30,
+                  fontFamily: "Regular",
                 }}
               >
                 You can't stake less than 0.25 NEAR
@@ -215,7 +258,14 @@ const Transaction = () => {
           <Card />
           <Card />
           <View>
-            <Text style={{ fontWeight: "600", fontSize: 16, color: "#fff" }}>
+            <Text
+              style={{
+                fontWeight: "600",
+                fontSize: 16,
+                color: "#fff",
+                fontFamily: "Regular",
+              }}
+            >
               Transactions
             </Text>
           </View>
@@ -242,7 +292,13 @@ const Transaction = () => {
                       margin: 3,
                     }}
                   >
-                    <Text style={{ color: "white", margin: 7 }}>
+                    <Text
+                      style={{
+                        color: "white",
+                        margin: 7,
+                        fontFamily: "Regular",
+                      }}
+                    >
                       {item.date}
                     </Text>
                     <View
@@ -261,13 +317,21 @@ const Transaction = () => {
                           // style={{ opacity: 0.5 }}
                         />
                         <View style={{ gap: 8 }}>
-                          <Text style={{ color: "white" }}>{item.Title}</Text>
+                          <Text
+                            style={{ color: "white", fontFamily: "Regular" }}
+                          >
+                            {item.Title}
+                          </Text>
                           <Text style={{ color: "white" }}>{item.time}</Text>
                         </View>
                       </View>
                       <View style={{ gap: 8 }}>
-                        <Text style={{ color: "white" }}>{item.status}</Text>
-                        <Text style={{ color: "white" }}>{item.text}</Text>
+                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                          {item.status}
+                        </Text>
+                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                          {item.text}
+                        </Text>
                       </View>
                     </View>
                   </TouchableOpacity>

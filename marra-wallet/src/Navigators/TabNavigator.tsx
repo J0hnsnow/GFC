@@ -9,6 +9,7 @@ import SettingScreen from "../Screens/SettingScreen";
 import Transaction from "../Screens/Transaction";
 import Login from "../Screens/Registration/Login";
 import Signup from "../Screens/Registration/Signup";
+import SwapScreen from "../Screens/SwapScreen";
 
 export type TabsStackParamList = {
   home: undefined;
@@ -28,7 +29,7 @@ const TabsNavigator = () => {
         tabBarShowLabel: false,
         tabBarStyle: {
           position: "absolute",
-          bottom: 30,
+          bottom: 50,
           marginHorizontal: 50,
           borderRadius: 32,
         },
@@ -91,7 +92,7 @@ const TabsNavigator = () => {
       /> */}
       <TabsStack.Screen
         name="browser"
-        component={Example}
+        component={SwapScreen}
         options={{
           headerTransparent: true,
           headerShown: false,
