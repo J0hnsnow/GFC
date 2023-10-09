@@ -17,6 +17,7 @@ import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import CustomBackdrop from "../components/WatchList/CustomBackdrop";
+import Cardgradient from "./Cardgradient";
 // notifications data
 const notifications = [
   {
@@ -126,71 +127,73 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           {/* portfolio card on the homescreen */}
-          <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
-            <TouchableOpacity
-              style={{
-                // background: linear-gradient(253deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 100%);
+          <Cardgradient>
+            <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
+              <TouchableOpacity
+                style={{
+                  // background: linear-gradient(253deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 100%);
 
-                flex: 1,
-                height: 200,
-                borderRadius: 12,
+                  flex: 1,
+                  height: 200,
+                  borderRadius: 12,
 
-                alignItems: "center",
-                paddingHorizontal: 24,
-                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  alignItems: "center",
+                  paddingHorizontal: 24,
+                  // backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
 
-                borderColor: colors.border,
-                // "rgb(122, 49, 111)",
-              }}
-            >
-              <View style={{ gap: 12 }}>
-                <Text
-                  style={{
-                    top: 10,
-                    // fontSize: 12,
-                    color: "white",
-                    left: 24,
-                    fontFamily: "Medium",
-                    // opacity: 0.5,
-                  }}
-                >
-                  Your Portfolio
-                </Text>
-                <View style={{ flexDirection: "row", gap: 10 }}>
-                  <Icons
-                    name="attach-money"
-                    size={28}
-                    color="#35d6ed"
-                    // style={{ opacity: 0.5 }}
-                  />
+                  borderColor: colors.border,
+                  // "rgb(122, 49, 111)",
+                }}
+              >
+                <View style={{ gap: 12 }}>
                   <Text
                     style={{
-                      flex: 1,
-                      fontSize: 24,
+                      top: 10,
+                      // fontSize: 12,
                       color: "white",
-                      fontFamily: "Bold",
+                      left: 24,
+                      fontFamily: "Medium",
                       // opacity: 0.5,
                     }}
                   >
-                    450,937
+                    Your Portfolio
+                  </Text>
+                  <View style={{ flexDirection: "row", gap: 10 }}>
+                    <Icons
+                      name="attach-money"
+                      size={28}
+                      color="#35d6ed"
+                      // style={{ opacity: 0.5 }}
+                    />
+                    <Text
+                      style={{
+                        flex: 1,
+                        fontSize: 24,
+                        color: "white",
+                        fontFamily: "Bold",
+                        // opacity: 0.5,
+                      }}
+                    >
+                      450,937
+                    </Text>
+                  </View>
+                  <Text
+                    style={{
+                      // fontSize: 12,
+                      color: "white",
+                      // opacity: 0.5,
+                      paddingHorizontal: 24,
+                      // bottom: 10,
+                      fontFamily: "Medium",
+                    }}
+                  >
+                    Monthly Profit
                   </Text>
                 </View>
-                <Text
-                  style={{
-                    // fontSize: 12,
-                    color: "white",
-                    // opacity: 0.5,
-                    paddingHorizontal: 24,
-                    // bottom: 10,
-                    fontFamily: "Medium",
-                  }}
-                >
-                  Monthly Profit
-                </Text>
-              </View>
-            </TouchableOpacity>
-          </View>
+              </TouchableOpacity>
+            </View>
+          </Cardgradient>
           <View>
             {/* add request buttons */}
 
