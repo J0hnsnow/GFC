@@ -14,6 +14,7 @@ const Cardgradient: React.FC<CardgradientProps> = ({
   return (
     <SafeAreaView style={styles.container}>
       <LinearGradient
+        // colors={["#0455bf", "#35d6ed"]}
         colors={["#0455bf", "#35d6ed"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}

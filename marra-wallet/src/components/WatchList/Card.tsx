@@ -56,19 +56,10 @@ const Card = () => {
                       alignContent: "center",
                       // backgroundColor: "rgba(3, 4, 95, 0.2)",
                       width: 300,
-                      // height:120,
+                      paddingVertical: 10,
                       borderRadius: 12,
                     }}
                   >
-                    <Text
-                      style={{
-                        color: "white",
-                        margin: 7,
-                        fontFamily: "Regular",
-                      }}
-                    >
-                      {item.date}
-                    </Text>
                     <View
                       style={{
                         flexDirection: "row",
@@ -76,30 +67,47 @@ const Card = () => {
                       }}
                     >
                       <View style={{ flexDirection: "row", gap: 5 }}>
-                        {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
-                        <Icons
-                          name="south"
-                          size={24}
-                          color="white"
-                          // borderWidth={2}
-                          // style={{ opacity: 0.5 }}
-                        />
-                        <View style={{ gap: 8 }}>
+                        <View style={{ gap: 2 }}>
                           <Text
                             style={{ color: "white", fontFamily: "Regular" }}
                           >
                             {item.Title}
                           </Text>
-                          <Text style={{ color: "white" }}>{item.time}</Text>
+                          <View style={{ flexDirection: "row", gap: 5 }}>
+                            <Text
+                              style={{
+                                color: "white",
+
+                                fontFamily: "Regular",
+                              }}
+                            >
+                              {item.date},
+                            </Text>
+                            <Text
+                              style={{ color: "white", fontFamily: "Regular" }}
+                            >
+                              {item.time}
+                            </Text>
+                          </View>
                         </View>
                       </View>
-                      <View style={{ gap: 8 }}>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          backgroundColor: "rgba(255, 255, 255, 0.2)",
+
+                          justifyContent: "center",
+                          borderRadius: 12,
+                          width: 60,
+                        }}
+                      >
+                        <Text style={{ color: "white", fontFamily: "Bold" }}>
                           {item.status}
                         </Text>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                        {/* <Text style={{ color: "white", fontFamily: "Regular" }}>
                           {item.text}
-                        </Text>
+                        </Text> */}
                       </View>
                     </View>
                   </TouchableOpacity>
@@ -140,19 +148,10 @@ const Card = () => {
                       alignContent: "center",
                       // backgroundColor: "rgba(3, 4, 95, 0.2)",
                       width: 300,
-                      // height:120,
+                      paddingVertical: 10,
                       borderRadius: 12,
                     }}
                   >
-                    <Text
-                      style={{
-                        color: "white",
-                        margin: 7,
-                        fontFamily: "Regular",
-                      }}
-                    >
-                      {item.date}
-                    </Text>
                     <View
                       style={{
                         flexDirection: "row",
@@ -160,30 +159,48 @@ const Card = () => {
                       }}
                     >
                       <View style={{ flexDirection: "row", gap: 5 }}>
-                        {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
-                        <Icons
-                          name="south"
-                          size={24}
-                          color="white"
-                          // borderWidth={2}
-                          // style={{ opacity: 0.5 }}
-                        />
-                        <View style={{ gap: 8 }}>
+                        <View style={{ gap: 2 }}>
                           <Text
                             style={{ color: "white", fontFamily: "Regular" }}
                           >
                             {item.Title}
                           </Text>
-                          <Text style={{ color: "white" }}>{item.time}</Text>
+                          <View style={{ flexDirection: "row", gap: 5 }}>
+                            <Text
+                              style={{
+                                color: "white",
+
+                                fontFamily: "Regular",
+                              }}
+                            >
+                              {item.date},
+                            </Text>
+                            <Text
+                              style={{ color: "white", fontFamily: "Regular" }}
+                            >
+                              {item.time}
+                            </Text>
+                          </View>
                         </View>
                       </View>
-                      <View style={{ gap: 8 }}>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          alignItems: "center",
+                          // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                          backgroundColor: "rgba(255, 255, 255, 0.2)",
+                          height: 30,
+                          justifyContent: "center",
+                          borderRadius: 12,
+                          width: 60,
+                        }}
+                      >
+                        <Text style={{ color: "white", fontFamily: "Bold" }}>
                           {item.status}
                         </Text>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
+                        {/* <Text style={{ color: "white", fontFamily: "Regular" }}>
                           {item.text}
-                        </Text>
+                        </Text> */}
                       </View>
                     </View>
                   </TouchableOpacity>
@@ -366,10 +383,10 @@ const Card = () => {
                 paddingVertical: 12,
               }}
             >
-              <View style={{ gap: 10 }}>
+              <View style={{ gap: 20 }}>
                 <Text
                   style={{
-                    fontFamily: "Regular",
+                    fontFamily: "Medium",
                     color: "white",
                     fontSize: 14,
                   }}
@@ -378,7 +395,7 @@ const Card = () => {
                 </Text>
                 <Text
                   style={{
-                    fontFamily: "Regular",
+                    fontFamily: "Medium",
                     color: "white",
                     fontSize: 14,
                   }}
@@ -386,25 +403,37 @@ const Card = () => {
                   Today
                 </Text>
               </View>
-              <View style={{ gap: 10, right: 15 }}>
-                <Text
+              <View style={{ gap: 20, right: 15 }}>
+                <View
                   style={{
-                    fontFamily: "Regular",
-                    color: "white",
-                    fontSize: 14,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+
+                    justifyContent: "center",
+                    borderRadius: 12,
+                    width: 60,
                   }}
                 >
-                  +10
-                </Text>
-                <Text
+                  <Text style={{ color: "white", fontFamily: "Bold" }}>
+                    +$10.67
+                  </Text>
+                </View>
+                <View
                   style={{
-                    fontFamily: "Regular",
-                    color: "white",
-                    fontSize: 14,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+
+                    justifyContent: "center",
+                    borderRadius: 12,
+                    width: 60,
                   }}
                 >
-                  +30
-                </Text>
+                  <Text style={{ color: "white", fontFamily: "Bold" }}>
+                    +$10.67
+                  </Text>
+                </View>
               </View>
             </View>
 
@@ -479,7 +508,7 @@ const Card = () => {
               <View style={{ gap: 10 }}>
                 <Text
                   style={{
-                    fontFamily: "Regular",
+                    fontFamily: "Medium",
                     color: "white",
                     fontSize: 14,
                   }}
@@ -488,7 +517,7 @@ const Card = () => {
                 </Text>
                 <Text
                   style={{
-                    fontFamily: "Regular",
+                    fontFamily: "Medium",
                     color: "white",
                     fontSize: 14,
                   }}
@@ -496,25 +525,37 @@ const Card = () => {
                   Login streaks
                 </Text>
               </View>
-              <View style={{ gap: 10, right: 15 }}>
-                <Text
+              <View style={{ gap: 20, right: 15 }}>
+                <View
                   style={{
-                    fontFamily: "Regular",
-                    color: "white",
-                    fontSize: 14,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+
+                    justifyContent: "center",
+                    borderRadius: 12,
+                    width: 60,
                   }}
                 >
-                  3 days
-                </Text>
-                <Text
+                  <Text style={{ color: "white", fontFamily: "Bold" }}>
+                    4days
+                  </Text>
+                </View>
+                <View
                   style={{
-                    fontFamily: "Regular",
-                    color: "white",
-                    fontSize: 14,
+                    flexDirection: "row",
+                    alignItems: "center",
+                    backgroundColor: "rgba(255, 255, 255, 0.2)",
+
+                    justifyContent: "center",
+                    borderRadius: 12,
+                    width: 60,
                   }}
                 >
-                  5 days
-                </Text>
+                  <Text style={{ color: "white", fontFamily: "Bold" }}>
+                    3 days
+                  </Text>
+                </View>
               </View>
             </View>
 
