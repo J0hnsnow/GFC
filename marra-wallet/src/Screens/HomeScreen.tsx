@@ -154,22 +154,9 @@ const HomeScreen = ({ navigation }) => {
                 }}
               > */}
             <View style={{ gap: 12, alignItems: "center" }}>
-              {/* <Text
-                style={{
-                  top: 10,
-                  // fontSize: 12,
-                  color: "white",
-                  left: 24,
-                  fontFamily: "Medium",
-                  // opacity: 0.5,
-                }}
-              >
-                Your Portfolio
-              </Text> */}
               <View
                 style={{
                   flexDirection: "row",
-                  gap: 10,
                 }}
               >
                 <Icons
@@ -345,15 +332,13 @@ const HomeScreen = ({ navigation }) => {
           {/* Investment Card */}
           <View style={{ gap: 24 }}>
             <Card />
-            <Card />
-            <Card />
           </View>
 
           {/* notifications card end*/}
 
           {/* coins card */}
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               paddingHorizontal: 14,
               flexDirection: "row",
@@ -371,7 +356,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ color: "white", fontFamily: "Regular" }}>
               Add Favorites
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </SafeAreaView>
         {/* Bottom sheet modal */}
         <BottomSheetModal
