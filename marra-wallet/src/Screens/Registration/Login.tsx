@@ -53,7 +53,7 @@ const Login = ({ navigation }) => {
                   color: "white",
                 }}
               >
-                Email address
+                New Password
               </Text>
 
               <View
@@ -89,7 +89,7 @@ const Login = ({ navigation }) => {
                   color: "white",
                 }}
               >
-                Password
+                Confirm password
               </Text>
 
               <View

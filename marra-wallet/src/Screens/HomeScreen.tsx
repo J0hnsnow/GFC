@@ -162,7 +162,7 @@ const HomeScreen = ({ navigation }) => {
                 <Icons
                   name="attach-money"
                   size={28}
-                  color="#35d6ed"
+                  color="white"
                   // style={{ opacity: 0.5 }}
                 />
                 <Text
@@ -201,7 +201,10 @@ const HomeScreen = ({ navigation }) => {
                 margin: "auto",
               }}
             >
-              <View style={{ flexDirection: "row", gap: 10 }}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("login")}
+                style={{ flexDirection: "row", gap: 10 }}
+              >
                 <Icons name="work" style={{ color: "white", fontSize: 14 }} />
                 <Text style={{ color: "white", fontFamily: "Medium" }}>
                   Portfolio
@@ -213,9 +216,10 @@ const HomeScreen = ({ navigation }) => {
                     fontSize: 14,
                     borderRadius: 50,
                     backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                    alignSelf: "center",
                   }}
                 />
-              </View>
+              </TouchableOpacity>
             </TouchableOpacity>
             {/* </TouchableOpacity> */}
           </View>

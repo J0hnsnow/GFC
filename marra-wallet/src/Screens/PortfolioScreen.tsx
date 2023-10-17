@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import { useTheme } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
+import WatchList from "../components/WatchList/WatchList";
 
 const list = [
   {
@@ -34,54 +35,121 @@ const list = [
 const AVATAR_URL =
   "https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp";
 
+const Categories = ["Transfer", "Buy", "Grow", "Swap"];
 const Portfolio = ({ navigation }) => {
   const { colors } = useTheme();
   const [listIndex, setListIndex] = useState(0);
+  const [categoryIndex, setCategoryIndex] = useState(0);
 
   return (
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
-          <View
-            style={{
-              paddingHorizontal: 24,
-              paddingVertical: 24,
-              flexDirection: "row",
-              alignItems: "center",
-              gap: 120,
-              justifyContent: "space-between",
-              // marginLeft:24,
-            }}
-          >
-            <Image
-              source={{ uri: AVATAR_URL }}
-              style={{ width: 32, aspectRatio: 1, borderRadius: 32 }}
-              resizeMode="cover"
-            />
-
-            <TouchableOpacity
+          <View style={{ flexDirection: "row", paddingHorizontal: 24 }}>
+            <Icons
+              name="chevron-right"
               style={{
-                flex: 1,
-                paddingHorizontal: 14,
-                flexDirection: "row",
-                height: 40,
-                width: 20,
-
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 22,
-                borderWidth: 1,
-                backgroundColor: "#050730",
-                // borderColor:colors.border,
+                color: "white",
+                fontSize: 28,
+                borderRadius: 50,
+                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                alignSelf: "center",
+              }}
+            />
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+                left: "40%",
               }}
             >
-              <Text style={{ color: "white", fontFamily: "Regular" }}>
-                Balance $
-              </Text>
-              <Text style={{ color: "white", fontFamily: "Bold" }}>0.00</Text>
-            </TouchableOpacity>
+              Portfolio
+            </Text>
           </View>
 
+          <View
+            style={{ flexDirection: "row", gap: 20, paddingHorizontal: 24 }}
+          >
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              Crypto
+            </Text>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              NFT
+            </Text>
+          </View>
+          <View style={{ gap: 5, paddingHorizontal: 24 }}>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Medium",
+              }}
+            >
+              Total balance-USD
+            </Text>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              $2.39
+            </Text>
+          </View>
+          {/* flatlist */}
+          <View>
+            <FlatList
+              data={Categories}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{
+                paddingHorizontal: 16,
+                gap: 12,
+              }}
+              renderItem={({ item, index }) => {
+                const isSelected = categoryIndex === index;
+                return (
+                  <TouchableOpacity
+                    onPress={() => setCategoryIndex(index)}
+                    style={{
+                      backgroundColor: isSelected
+                        ? colors.primary
+                        : colors.card,
+                      paddingHorizontal: 20,
+                      paddingVertical: 12,
+                      borderRadius: 100,
+                      borderWidth: isSelected ? 0 : 1,
+                      borderColor: colors.border,
+                    }}
+                  >
+                    <Text
+                      style={{
+                        color: isSelected ? colors.background : colors.text,
+                        fontWeight: "600",
+                        fontSize: 14,
+                        opacity: isSelected ? 1 : 0.5,
+                      }}
+                    >
+                      {item}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              }}
+            />
+          </View>
+          {/* coins */}
+          <View>
+            <WatchList />
+          </View>
           {/* your porrtfolio card */}
 
           <View style={{ paddingHorizontal: 14, gap: 16, flex: 1 }}>
