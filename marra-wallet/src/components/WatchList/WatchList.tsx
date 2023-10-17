@@ -75,15 +75,14 @@ const WatchList = () => {
       style={{
         gap: 12,
         // borderWidth: 1,
-        margin: 20,
+        // margin: 20,
         borderRadius: 16,
-        padding: 10,
-        backgroundColor:'rgba(3, 4, 95, 0.2)',
+        paddingHorizontal: 24,
+        // backgroundColor:'rgba(3, 4, 95, 0.2)',
         // backgroundColor: '  rgba(255, 255, 255, 0.14) 100%',
-        borderColor:"gray"
-        
+        // borderColor:"gray"
       }}
-      
+
       // numberOfLines={1}
     >
       <Header />

@@ -13,13 +13,13 @@ import SwapScreen from "../Screens/SwapScreen";
 
 export type TabsStackParamList = {
   home: undefined;
-  markets: undefined;
+  shop: undefined;
   portfolio: undefined;
-  browser: undefined;
+  swap: undefined;
   settings: undefined;
   transaction: undefined;
   login: undefined;
-  signup: undefined;
+  rewards: undefined;
 };
 const TabsNavigator = () => {
   const TabsStack = createBottomTabNavigator<TabsStackParamList>();
@@ -28,10 +28,15 @@ const TabsNavigator = () => {
       screenOptions={{
         tabBarShowLabel: false,
         tabBarStyle: {
-          position: "absolute",
-          bottom: 50,
-          marginHorizontal: 50,
-          borderRadius: 32,
+          position: "relative",
+          backgroundColor: "white",
+
+          opacity: 0.7 /* Setting the opacity */,
+          // backgroundColor: "blue",
+
+          height: 70,
+
+          // alignSelf: "center",
         },
       }}
     >
@@ -42,7 +47,13 @@ const TabsNavigator = () => {
           headerTransparent: true,
           headerShown: false,
           tabBarIcon(props) {
-            return <Icons name="account-balance-wallet" {...props} />;
+            return (
+              <View style={{}}>
+                <Icons name="home" {...props} />;<Text>Home</Text>
+              </View>
+            );
+
+            //
           },
         }}
       />
@@ -53,65 +64,83 @@ const TabsNavigator = () => {
           headerTransparent: true,
           headerShown: false,
           tabBarIcon(props) {
-            return <Icons name="work" {...props} />;
+            return (
+              <View style={{}}>
+                <Icons name="work" {...props} />;<Text>Grow</Text>
+              </View>
+            );
+
+            // return <Icons name="work" {...props} />;
           },
         }}
       />
       <TabsStack.Screen
-        name="transaction"
+        name="rewards"
         component={Transaction}
         options={{
           headerTransparent: true,
           headerShown: false,
           tabBarIcon(props) {
-            return <Icons name="bar-chart" {...props} />;
+            return (
+              <View style={{}}>
+                <Icons name="star" {...props} />;<Text>Rewards</Text>
+              </View>
+            );
+
+            // return <Icons name="bar-chart" {...props} />;
           },
         }}
       />
-      {/* <TabsStack.Screen
-        name="login"
-        component={Login}
-        options={{
-          headerTransparent: true,
-          headerShown: false,
-          // tabBarIcon(props) {
-          //   return <Icons name="bar-chart" {...props} />;
-          // },
-        }}
-      /> */}
-      {/* <TabsStack.Screen
-        name="signup"
-        component={Signup}
-        options={{
-          headerTransparent: true,
-          headerShown: false,
-          // tabBarIcon(props) {
-          //   return <Icons name="account-balance-wallet" {...props} />;
-          // },
-        }}
-      /> */}
+
       <TabsStack.Screen
-        name="browser"
+        name="swap"
         component={SwapScreen}
         options={{
           headerTransparent: true,
           headerShown: false,
           tabBarIcon(props) {
-            return <Icons name="swap-vert" {...props} />;
+            return (
+              <View style={{}}>
+                <Icons name="swap-vert" {...props} />;<Text>Swap</Text>
+              </View>
+            );
+            // return <Icons name="swap-vert" {...props} />;
           },
         }}
       />
       <TabsStack.Screen
-        name="settings"
+        name="shop"
         component={SettingScreen}
         options={{
           headerTransparent: true,
           headerShown: false,
           tabBarIcon(props) {
-            return <Icons name="settings" {...props} />;
+            return (
+              <View style={{}}>
+                <Icons name="settings" {...props} />;<Text>Settings</Text>
+              </View>
+            );
+            // return <Icons name="settings" {...props} />;
           },
         }}
       />
+
+      {/* <TabsStack.Screen
+        name="shop"
+        component={SettingScreen}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          tabBarIcon(props) {
+            return (
+              <View style={{}}>
+                <Icons name="shop" {...props} />;<Text>Shop</Text>
+              </View>
+            );
+            // return <Icons name="settings" {...props} />;
+          },
+        }}
+      /> */}
     </TabsStack.Navigator>
   );
 };

@@ -12,6 +12,12 @@ const Boxcoin = ({ item }: any) => {
         alignItems: "center",
         justifyContent: "space-between",
         marginBottom: 20,
+        backgroundColor: "rgba(3, 4, 95, 0.2)",
+        gap: 10,
+        // borderWidth: 1,
+
+        borderRadius: 16,
+        padding: 10,
       }}
     >
       <View style={{ alignItems: "center", paddingHorizontal: 5 }}>

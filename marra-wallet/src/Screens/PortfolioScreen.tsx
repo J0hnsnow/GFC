@@ -12,6 +12,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import { useTheme } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
+import WatchList from "../components/WatchList/WatchList";
 
 const list = [
   {
@@ -34,320 +35,122 @@ const list = [
 const AVATAR_URL =
   "https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp";
 
+const Categories = ["Transfer", "Buy", "Grow", "Swap"];
 const Portfolio = ({ navigation }) => {
   const { colors } = useTheme();
   const [listIndex, setListIndex] = useState(0);
+  const [categoryIndex, setCategoryIndex] = useState(0);
 
   return (
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
-          <View
-            style={{
-              paddingHorizontal: 24,
-              paddingVertical: 24,
-              flexDirection: "row",
-              alignItems: "center",
-              gap: 120,
-              justifyContent: "space-between",
-              // marginLeft:24,
-            }}
-          >
-            <Image
-              source={{ uri: AVATAR_URL }}
-              style={{ width: 32, aspectRatio: 1, borderRadius: 32 }}
-              resizeMode="cover"
+          <View style={{ flexDirection: "row", paddingHorizontal: 24 }}>
+            <Icons
+              name="chevron-right"
+              style={{
+                color: "white",
+                fontSize: 28,
+                borderRadius: 50,
+                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                alignSelf: "center",
+              }}
             />
-
-            <TouchableOpacity
+            <Text
               style={{
-                flex: 1,
-                paddingHorizontal: 14,
-                flexDirection: "row",
-                height: 40,
-                width: 20,
-
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: 22,
-                borderWidth: 1,
-                backgroundColor: "#050730",
-                // borderColor:colors.border,
+                color: "white",
+                fontFamily: "Bold",
+                left: "40%",
               }}
             >
-              <Text style={{ color: "white", fontFamily: "Regular" }}>
-                Balance $
-              </Text>
-              <Text style={{ color: "white", fontFamily: "Bold" }}>0.00</Text>
-            </TouchableOpacity>
+              Portfolio
+            </Text>
           </View>
-
-          {/* your porrtfolio card */}
-
-          <View style={{ paddingHorizontal: 14, gap: 16, flex: 1 }}>
-            <TouchableOpacity
-              style={{
-                flex: 1,
-
-                height: 200,
-                borderRadius: 12,
-                borderWidth: 1,
-                borderColor: "gray",
-                alignItems: "center",
-                paddingHorizontal: 24,
-                backgroundColor: "rgba(3, 4, 95, 0.2)",
-              }}
-            >
-              <View style={{ gap: 15 }}>
-                <Text
-                  style={{
-                    top: 10,
-                    fontSize: 16,
-                    color: "white",
-                    paddingHorizontal: 34,
-                    fontFamily: "Regular",
-
-                    // opacity: 0.5,
-                  }}
-                >
-                  Your Portfolio
-                </Text>
-                <View
-                  style={{
-                    flexDirection: "row",
-                    gap: 10,
-                    paddingHorizontal: 24,
-                  }}
-                >
-                  <Icons
-                    name="attach-money"
-                    size={34}
-                    color="white"
-                    // style={{ opacity: 0.5 }}
-                  />
-                  <Text
-                    style={{
-                      fontSize: 24,
-                      color: "white",
-                      fontFamily: "Regular",
-
-                      // opacity: 0.5,
-                    }}
-                  >
-                    0.42
-                  </Text>
-                  <Icons
-                    name="sync"
-                    size={34}
-                    color="white"
-                    // style={{ opacity: 0.5 }}
-                  />
-                </View>
-
-                <View style={{ paddingHorizontal: 34, height: 30 }}>
-                  <TouchableOpacity
-                    style={{
-                      flex: 1,
-                      width: 200,
-                      height: 200,
-
-                      borderRadius: 12,
-                      borderWidth: 1,
-                      borderColor: colors.border,
-                      alignItems: "center",
-                      paddingHorizontal: 24,
-                      flexDirection: "row",
-                      gap: 2,
-                      backgroundColor: "#050730",
-                    }}
-                  >
-                    <Text
-                      style={{
-                        fontFamily: "Regular",
-                        fontSize: 16,
-                        color: "#F61491",
-
-                        // opacity: 0.5,
-                      }}
-                    >
-                      -$0.04 (-4.19%)
-                    </Text>
-                  </TouchableOpacity>
-                </View>
-
-                {/*swap buttons  */}
-                <View
-                  style={{
-                    flexDirection: "row",
-                    paddingHorizontal: 24,
-                    paddingVertical: 10,
-                    gap: 12,
-                  }}
-                >
-                  <TouchableOpacity
-                    style={{
-                      flex: 1,
-                      width: 150,
-                      // height: 80,
-
-                      borderRadius: 12,
-                      borderWidth: 1,
-                      // borderColor: colors.border,
-                      alignItems: "center",
-                      paddingHorizontal: 24,
-                      flexDirection: "row",
-                      gap: 12,
-                      backgroundColor: "rgba(3, 4, 95, 0.2)",
-                    }}
-                  >
-                    <Icons
-                      name="local-atm"
-                      size={24}
-                      color="white"
-                      // style={{ opacity: 0.5 }}
-                    />
-                    <Text
-                      style={{
-                        flex: 1,
-                        fontSize: 18,
-                        color: "white",
-                        fontFamily: "Regular",
-                        // opacity: 0.5,
-                      }}
-                    >
-                      Stake
-                    </Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                    style={{
-                      flex: 1,
-                      width: 150,
-                      // height: 80,
-                      borderRadius: 12,
-                      borderWidth: 1,
-                      // borderColor: colors.border,
-
-                      alignItems: "center",
-                      paddingHorizontal: 24,
-                      flexDirection: "row",
-                      gap: 12,
-                      backgroundColor: "rgba(3, 4, 95, 0.2)",
-                    }}
-                  >
-                    <Icons
-                      name="sync"
-                      size={24}
-                      color="white"
-                      // style={{ opacity: 0.5 }}
-                    />
-                    <Text
-                      style={{
-                        flex: 1,
-                        fontSize: 18,
-                        color: "white",
-                        fontFamily: "Regular",
-                      }}
-                    >
-                      Swap
-                    </Text>
-                  </TouchableOpacity>
-                </View>
-
-                {/* end of swap buttons */}
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          {/* FLATLIST */}
 
           <View
-            style={{
-              gap: 12,
-              borderWidth: 1,
-              margin: 20,
-              borderRadius: 16,
-              padding: 10,
-              backgroundColor: "rgba(3, 4, 95, 0.2)",
-              borderColor: "gray",
-            }}
+            style={{ flexDirection: "row", gap: 20, paddingHorizontal: 24 }}
           >
-            <Card />
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              Crypto
+            </Text>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              NFT
+            </Text>
+          </View>
+          <View style={{ gap: 5, paddingHorizontal: 24 }}>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Medium",
+              }}
+            >
+              Total balance-USD
+            </Text>
+            <Text
+              style={{
+                color: "white",
+                fontFamily: "Bold",
+              }}
+            >
+              $2.39
+            </Text>
+          </View>
+          {/* flatlist */}
+          <View>
             <FlatList
-              data={list}
-              // showsHorizontalScrollIndicator={false}
-              // contentContainerStyle={{
-              //   paddingHorizontal: 16,
-              //   gap: 12,}}
+              data={Categories}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{
+                paddingHorizontal: 16,
+                gap: 12,
+              }}
               renderItem={({ item, index }) => {
-                // const isSelected = listIndex === index;
-
+                const isSelected = categoryIndex === index;
                 return (
                   <TouchableOpacity
-                    onPress={() => navigation.navigate("transaction")}
+                    onPress={() => setCategoryIndex(index)}
                     style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      marginBottom: 10,
+                      backgroundColor: isSelected
+                        ? colors.primary
+                        : colors.card,
+                      paddingHorizontal: 20,
+                      paddingVertical: 12,
+                      borderRadius: 100,
+                      borderWidth: isSelected ? 0 : 1,
+                      borderColor: colors.border,
                     }}
                   >
-                    <View
+                    <Text
                       style={{
-                        flexDirection: "row",
-                        paddingHorizontal: 5,
-                        alignItems: "center",
+                        color: isSelected ? colors.background : colors.text,
+                        fontWeight: "600",
+                        fontSize: 14,
+                        opacity: isSelected ? 1 : 0.5,
                       }}
                     >
-                      <Image
-                        style={{ width: 30, height: 30, margin: 7 }}
-                        className="rounded-full"
-                        source={{
-                          uri: "https://t4.ftcdn.net/jpg/02/95/12/57/240_F_295125771_qVOz1TkErXCwaOna0KvquKR32H4ASyf9.jpg",
-                        }}
-                      />
-
-                      <View style={{ flexDirection: "row" }}>
-                        <Text
-                          style={{
-                            fontFamily: "Bold",
-                            fontSize: 16,
-                            color: "white",
-                            // opacity: 0.5,
-                          }}
-                        >
-                          {item.title}
-                        </Text>
-                        <Text
-                          style={{
-                            fontSize: 16,
-                            color: "white",
-                            opacity: 0.5,
-                            fontFamily: "Regular",
-                          }}
-                        >
-                          {item.shortTitle}
-                        </Text>
-                      </View>
-                    </View>
-
-                    <View>
-                      <Text
-                        style={{
-                          fontSize: 16,
-                          color: "white",
-                          fontFamily: "Bold",
-                          // opacity: 0.5,
-                        }}
-                      >
-                        {item.text}
-                      </Text>
-                    </View>
+                      {item}
+                    </Text>
                   </TouchableOpacity>
                 );
               }}
             />
           </View>
+          {/* coins */}
+          <View>
+            <WatchList />
+          </View>
+          {/* your porrtfolio card */}
         </SafeAreaView>
       </ScrollView>
     </ScreenGradient>

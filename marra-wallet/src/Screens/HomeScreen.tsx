@@ -17,6 +17,8 @@ import LinearGradient from "react-native-linear-gradient";
 import { BlurView } from "expo-blur";
 import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import CustomBackdrop from "../components/WatchList/CustomBackdrop";
+import Cardgradient from "./Cardgradient";
+import Card from "../components/WatchList/Card";
 // notifications data
 const notifications = [
   {
@@ -126,277 +128,221 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           {/* portfolio card on the homescreen */}
-          <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
-            <TouchableOpacity
-              style={{
-                // background: linear-gradient(253deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 100%);
 
-                flex: 1,
-                height: 200,
-                borderRadius: 12,
+          <View
+            style={{
+              paddingHorizontal: 24,
+              gap: 16,
+              height: 110,
+            }}
+          >
+            {/* <TouchableOpacity
+                style={{
+                  // background: linear-gradient(253deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 100%);
 
-                alignItems: "center",
-                paddingHorizontal: 24,
-                backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                // backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  flex: 1,
+                  height: 200,
+                  borderRadius: 12,
 
-                borderColor: colors.border,
-                // "rgb(122, 49, 111)",
-              }}
-            >
-              <View style={{ gap: 12 }}>
+                  alignItems: "center",
+                  paddingHorizontal: 24,
+                  // backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
+
+                  borderColor: colors.border,
+                  // "rgb(122, 49, 111)",
+                }}
+              > */}
+            <View style={{ gap: 12, alignItems: "center" }}>
+              <View
+                style={{
+                  flexDirection: "row",
+                }}
+              >
+                <Icons
+                  name="attach-money"
+                  size={28}
+                  color="white"
+                  // style={{ opacity: 0.5 }}
+                />
                 <Text
                   style={{
-                    top: 10,
-                    // fontSize: 12,
+                    flex: 1,
+                    fontSize: 24,
                     color: "white",
-                    left: 24,
-                    fontFamily: "Medium",
+                    fontFamily: "Bold",
                     // opacity: 0.5,
                   }}
                 >
-                  Your Portfolio
-                </Text>
-                <View style={{ flexDirection: "row", gap: 10 }}>
-                  <Icons
-                    name="attach-money"
-                    size={28}
-                    color="#35d6ed"
-                    // style={{ opacity: 0.5 }}
-                  />
-                  <Text
-                    style={{
-                      flex: 1,
-                      fontSize: 24,
-                      color: "white",
-                      fontFamily: "Bold",
-                      // opacity: 0.5,
-                    }}
-                  >
-                    450,937
-                  </Text>
-                </View>
-                <Text
-                  style={{
-                    // fontSize: 12,
-                    color: "white",
-                    // opacity: 0.5,
-                    paddingHorizontal: 24,
-                    // bottom: 10,
-                    fontFamily: "Medium",
-                  }}
-                >
-                  Monthly Profit
+                  450,937
                 </Text>
               </View>
-            </TouchableOpacity>
-          </View>
-          <View>
-            {/* add request buttons */}
-
-            <View
+              <Text
+                style={{
+                  // fontSize: 12,
+                  color: "white",
+                  // opacity: 0.5,
+                  paddingHorizontal: 24,
+                  // bottom: 10,
+                  fontFamily: "Medium",
+                }}
+              >
+                Available 80.59
+              </Text>
+            </View>
+            <TouchableOpacity
               style={{
-                flexDirection: "row",
-                paddingHorizontal: 24,
-                gap: 14,
+                alignItems: "center",
+                backgroundColor: "rgba(3, 4, 95, 0.2)",
+                height: 30,
+                justifyContent: "center",
+                borderRadius: 12,
+                width: 150,
+                margin: "auto",
               }}
             >
               <TouchableOpacity
-                style={{
-                  flex: 1,
-                  width: 80,
-                  height: 80,
-                  borderRadius: 12,
-                  // borderWidth: 1,
-                  // borderColor: colors.border,
-                  alignItems: "center",
-                  paddingHorizontal: 24,
-                  flexDirection: "row",
-                  gap: 12,
-                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-                  // backgroundColor: "rgb(215, 187, 245)",
-                  backgroundColor: "rgba(3, 4, 95, 0.2)",
-                  // 'rgb(174, 216, 204)',
-                  borderColor: colors.border,
-                }}
+                onPress={() => navigation.navigate("portfolio")}
+                style={{ flexDirection: "row", gap: 10 }}
               >
-                <Icons
-                  name="add-circle"
-                  size={24}
-                  color="#35d6ed"
-                  // style={{ opacity: 0.5 }}
-                />
-                <Text
-                  style={{
-                    flex: 1,
-                    fontSize: 16,
-                    color: "white",
-                    fontFamily: "Regular",
-                    // opacity: 0.5,
-                  }}
-                >
-                  Add Money
+                <Icons name="work" style={{ color: "white", fontSize: 14 }} />
+                <Text style={{ color: "white", fontFamily: "Medium" }}>
+                  Portfolio
                 </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                style={{
-                  flex: 1,
-                  width: 80,
-                  height: 80,
-                  borderRadius: 12,
-
-                  // borderColor: colors.border,
-                  alignItems: "center",
-                  paddingHorizontal: 24,
-                  flexDirection: "row",
-                  borderColor: colors.border,
-                  gap: 12,
-                  // backgroundColor: "rgba(215, 187, 245, 0.5)",
-                  // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-
-                  backgroundColor: "rgba(3, 4, 95, 0.2)",
-                }}
-              >
                 <Icons
-                  name="cached"
-                  size={28}
-                  color="#35d6ed"
-                  fontFamily="Regular"
-                  // style={{ opacity: 0.5 }}
-                />
-                <Text
+                  name="chevron-right"
                   style={{
-                    flex: 1,
-                    fontSize: 16,
                     color: "white",
-                    fontFamily: "Regular",
-                    // fontFamily:'PoppinsBold'
+                    fontSize: 14,
+                    borderRadius: 50,
+                    backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                    alignSelf: "center",
                   }}
-                >
-                  Request
-                </Text>
+                />
               </TouchableOpacity>
-            </View>
-
-            <View>
-              {/* pay and transfer card */}
-              <TouchableOpacity
+            </TouchableOpacity>
+            {/* </TouchableOpacity> */}
+          </View>
+          {/* four buttons */}
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              paddingHorizontal: 24,
+            }}
+          >
+            <View style={{}}>
+              <View
                 style={{
-                  flex: 1,
-                  // width: 300,
-                  // height:120,
-                  borderRadius: 12,
-                  // borderWidth: 1,
-                  borderColor: colors.border,
+                  width: 50,
+                  height: 50,
+                  borderRadius: 50,
+                  backgroundColor: "#35d6ed",
                   alignItems: "center",
-                  paddingHorizontal: 30,
-                  flexDirection: "row",
-                  gap: 12,
-                  // backgroundColor: "rgba(3, 4, 95, 0.2)",
-                  backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
-                  margin: 20,
-                  paddingVertical: 14,
+                  justifyContent: "center",
                 }}
               >
                 <Icons
                   name="compare-arrows"
-                  size={28}
-                  color="#35d6ed"
-                  style={{ paddingHorizontal: 24 }}
-                />
-                <Text
                   style={{
-                    flex: 1,
-                    fontSize: 18,
                     color: "white",
-                    fontFamily: "Regular",
+                    fontSize: 28,
                   }}
+                />
+              </View>
+              <Text
+                style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
+              >
+                Transfer
+              </Text>
+            </View>
+            {/* button2  */}
+            <View style={{}}>
+              <View
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 50,
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Icons
+                  name="credit-card"
+                  style={{
+                    color: "white",
+                    fontSize: 24,
+                  }}
+                />
+              </View>
+              <Text
+                style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
+              >
+                Buy
+              </Text>
+            </View>
+            {/* botton 3 */}
+            <View style={{}}>
+              <View
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 50,
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{ fontFamily: "Bold", color: "white", fontSize: 24 }}
                 >
-                  Pay & transfer
+                  %
                 </Text>
-              </TouchableOpacity>
+              </View>
+              <Text
+                style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
+              >
+                Invest
+              </Text>
+            </View>
+            {/* button 4 */}
+            <View style={{}}>
+              <View
+                style={{
+                  width: 50,
+                  height: 50,
+                  borderRadius: 50,
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Icons
+                  name="cached"
+                  style={{
+                    color: "white",
+                    fontSize: 28,
+                  }}
+                />
+              </View>
+              <Text
+                style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
+              >
+                Trade
+              </Text>
             </View>
           </View>
-          {/* Notifications card */}
-          <View
-            style={{
-              borderRadius: 12,
-              marginHorizontal: 20,
-              // paddingHorizontal:24,
-              borderColor: colors.border,
-              // alignItems: "center",
-              // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-              backgroundColor: "rgba(3, 4, 95, 0.2)",
-            }}
-          >
-            <FlatList
-              data={notifications}
-              keyExtractor={(notifications) => notifications.id}
-              renderItem={({ item }) => {
-                return (
-                  <TouchableOpacity
-                    style={{
-                      flex: 1,
-                      justifyContent: "space-between",
-                      margin: 3,
-                    }}
-                  >
-                    <Text style={{ color: "white", margin: 7 }}>
-                      {item.date}
-                    </Text>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <View style={{ flexDirection: "row", gap: 5 }}>
-                        {/* <Text style={{ color: "white" }}>{item.icon}</Text> */}
-                        <Icons
-                          name="south"
-                          size={28}
-                          color="#35d6ed"
-                          // style={{ opacity: 0.5 }}
-                        />
-                        <View style={{ gap: 8 }}>
-                          <Text
-                            style={{
-                              color: "white",
-                              fontFamily: "Regular",
-                              fontSize: 14,
-                            }}
-                          >
-                            {item.Title}
-                          </Text>
-                          <Text
-                            style={{ color: "white", fontFamily: "Regular" }}
-                          >
-                            {item.time}
-                          </Text>
-                        </View>
-                      </View>
-                      <View style={{ gap: 8 }}>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
-                          {item.points}
-                        </Text>
-                        <Text style={{ color: "white", fontFamily: "Regular" }}>
-                          {item.text}
-                        </Text>
-                      </View>
-                    </View>
-                  </TouchableOpacity>
-                );
-              }}
-            />
+          {/* Investment Card */}
+          <View style={{ gap: 24 }}>
+            <Card />
           </View>
 
           {/* notifications card end*/}
 
           {/* coins card */}
-          <WatchList />
 
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               paddingHorizontal: 14,
               flexDirection: "row",
@@ -414,7 +360,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={{ color: "white", fontFamily: "Regular" }}>
               Add Favorites
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </SafeAreaView>
         {/* Bottom sheet modal */}
         <BottomSheetModal

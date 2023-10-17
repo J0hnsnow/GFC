@@ -53,7 +53,7 @@ const Login = ({ navigation }) => {
                   color: "white",
                 }}
               >
-                Email address
+                New Password
               </Text>
 
               <View
@@ -70,13 +70,26 @@ const Login = ({ navigation }) => {
                 }}
               >
                 <TextInput
-                  placeholder="Enter your email address"
+                  placeholder="New password"
                   placeholderTextColor="white"
-                  keyboardType="email-address"
+                  secureTextEntry={isPasswordShown}
                   style={{
                     width: "100%",
                   }}
                 />
+                <TouchableOpacity
+                  onPress={() => setIsPasswordShown(!isPasswordShown)}
+                  style={{
+                    position: "absolute",
+                    right: 12,
+                  }}
+                >
+                  {isPasswordShown == true ? (
+                    <Ionicons name="eye-off" size={24} color="white" />
+                  ) : (
+                    <Ionicons name="eye" size={24} color="white" />
+                  )}
+                </TouchableOpacity>
               </View>
             </View>
 
@@ -89,7 +102,7 @@ const Login = ({ navigation }) => {
                   color: "white",
                 }}
               >
-                Password
+                Confirm password
               </Text>
 
               <View
