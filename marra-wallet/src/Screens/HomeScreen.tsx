@@ -202,7 +202,7 @@ const HomeScreen = ({ navigation }) => {
               }}
             >
               <TouchableOpacity
-                onPress={() => navigation.navigate("login")}
+                onPress={() => navigation.navigate("portfolio")}
                 style={{ flexDirection: "row", gap: 10 }}
               >
                 <Icons name="work" style={{ color: "white", fontSize: 14 }} />

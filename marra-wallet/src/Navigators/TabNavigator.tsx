@@ -108,8 +108,24 @@ const TabsNavigator = () => {
           },
         }}
       />
-
       <TabsStack.Screen
+        name="shop"
+        component={SettingScreen}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          tabBarIcon(props) {
+            return (
+              <View style={{}}>
+                <Icons name="settings" {...props} />;<Text>Settings</Text>
+              </View>
+            );
+            // return <Icons name="settings" {...props} />;
+          },
+        }}
+      />
+
+      {/* <TabsStack.Screen
         name="shop"
         component={SettingScreen}
         options={{
@@ -124,7 +140,7 @@ const TabsNavigator = () => {
             // return <Icons name="settings" {...props} />;
           },
         }}
-      />
+      /> */}
     </TabsStack.Navigator>
   );
 };
