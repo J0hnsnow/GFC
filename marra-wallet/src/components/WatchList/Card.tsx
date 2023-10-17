@@ -2,11 +2,14 @@ import { View, Text, TouchableOpacity, Image, FlatList } from "react-native";
 import React from "react";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import Cardgradient from "../../Screens/Cardgradient";
+import Transaction from "../../Screens/Transaction";
+import { useNavigation } from "@react-navigation/native";
 
 const IMAGE_1 =
   "https://static.vecteezy.com/system/resources/previews/013/166/553/original/3d-online-trading-with-phone-concept-icon-or-3d-online-business-investment-graph-on-phone-png.png";
 
 const Card = () => {
+  const navigation = useNavigation();
   const notifications = [
     {
       id: "1",
@@ -115,6 +118,7 @@ const Card = () => {
               }}
             />
             <TouchableOpacity
+              onPress={() => navigation.navigate("transaction")}
               style={{
                 alignItems: "center",
                 backgroundColor: "white",
@@ -208,6 +212,7 @@ const Card = () => {
               }}
             />
             <TouchableOpacity
+              // onPress={() => navigation.navigate("transaction")}
               style={{
                 alignItems: "center",
                 backgroundColor: "white",

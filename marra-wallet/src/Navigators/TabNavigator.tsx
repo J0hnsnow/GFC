@@ -10,6 +10,8 @@ import Transaction from "../Screens/Transaction";
 import Login from "../Screens/Registration/Login";
 import Signup from "../Screens/Registration/Signup";
 import SwapScreen from "../Screens/SwapScreen";
+import Rewards from "../Screens/Rewards";
+import ShopScreen from "../Screens/ShopScreen";
 
 export type TabsStackParamList = {
   home: undefined;
@@ -76,7 +78,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen
         name="rewards"
-        component={Transaction}
+        component={Rewards}
         options={{
           headerTransparent: true,
           headerShown: false,
@@ -127,7 +129,7 @@ const TabsNavigator = () => {
 
       <TabsStack.Screen
         name="shop"
-        component={SettingScreen}
+        component={ShopScreen}
         options={{
           headerTransparent: true,
           headerShown: false,

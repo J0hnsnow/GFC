@@ -6,6 +6,8 @@ import TabsNavigator, { TabsStackParamList } from "./TabNavigator";
 import Portfolio from "../Screens/PortfolioScreen";
 import Login from "../Screens/Registration/Login";
 import Signup from "../Screens/Registration/Signup";
+import Transaction from "../Screens/Transaction";
+import SettingScreen from "../Screens/SettingScreen";
 
 export type RootStackParamList = {
   TabsStack: NavigatorScreenParams<TabsStackParamList>;
@@ -13,6 +15,8 @@ export type RootStackParamList = {
   login: undefined;
   signup: undefined;
   portfolio: undefined;
+  transaction: undefined;
+  settings: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -37,6 +41,20 @@ const RootNavigator = () => {
       <RootStack.Screen
         name="login"
         component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <RootStack.Screen
+        name="transaction"
+        component={Transaction}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <RootStack.Screen
+        name="settings"
+        component={SettingScreen}
         options={{
           headerShown: false,
         }}
