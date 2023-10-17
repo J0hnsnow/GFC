@@ -19,6 +19,8 @@ import { BottomSheetModal } from "@gorhom/bottom-sheet";
 import CustomBackdrop from "../components/WatchList/CustomBackdrop";
 import Cardgradient from "./Cardgradient";
 import Card from "../components/WatchList/Card";
+import { useNavigation } from "@react-navigation/native";
+
 // notifications data
 const notifications = [
   {
@@ -53,9 +55,9 @@ const notifications = [
 const AVATAR_URL =
   "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = () => {
   const { colors } = useTheme();
-
+  const navigation = useNavigation();
   const [categoryIndex, setCategoryIndex] = useState(0);
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -232,7 +234,8 @@ const HomeScreen = ({ navigation }) => {
             }}
           >
             <View style={{}}>
-              <View
+              <TouchableOpacity
+                onPress={() => navigation.navigate("transaction")}
                 style={{
                   width: 50,
                   height: 50,
@@ -249,7 +252,7 @@ const HomeScreen = ({ navigation }) => {
                     fontSize: 28,
                   }}
                 />
-              </View>
+              </TouchableOpacity>
               <Text
                 style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
               >
