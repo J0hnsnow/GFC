@@ -277,7 +277,6 @@ const Transaction = () => {
               borderColor: colors.border,
               // alignItems: "center",
               // backgroundColor: "  rgba(255, 255, 255, 0.14) 100%",
-              backgroundColor: "rgba(3, 4, 95, 0.2)",
             }}
           >
             <FlatList
@@ -290,17 +289,13 @@ const Transaction = () => {
                       flex: 1,
                       justifyContent: "space-between",
                       margin: 3,
+                      backgroundColor: "rgba(3, 4, 95, 0.2)",
+                      borderRadius: 12,
+                      marginBottom: 5,
+                      paddingVertical: 10,
+                      paddingHorizontal: 24,
                     }}
                   >
-                    <Text
-                      style={{
-                        color: "white",
-                        margin: 7,
-                        fontFamily: "Regular",
-                      }}
-                    >
-                      {item.date}
-                    </Text>
                     <View
                       style={{
                         flexDirection: "row",
@@ -322,7 +317,21 @@ const Transaction = () => {
                           >
                             {item.Title}
                           </Text>
-                          <Text style={{ color: "white" }}>{item.time}</Text>
+                          <View style={{ flexDirection: "row", gap: 5 }}>
+                            <Text
+                              style={{ color: "white", fontFamily: "Regular" }}
+                            >
+                              {item.time}
+                            </Text>
+                            <Text
+                              style={{
+                                color: "white",
+                                fontFamily: "Regular",
+                              }}
+                            >
+                              {item.date}
+                            </Text>
+                          </View>
                         </View>
                       </View>
                       <View style={{ gap: 8 }}>
@@ -372,12 +381,10 @@ const Card = () => {
           }}
         />
         <View>
-          <Text style={{ fontSize: 16, fontWeight: "700", color: "white" }}>
-            {" "}
+          {/* <Text style={{ fontSize: 16, fontWeight: "700", color: "white" }}>
             Near
-          </Text>
+          </Text> */}
           <Text style={{ color: "white", opacity: 0.5, fontSize: 16 }}>
-            {" "}
             0.61 . $1.5
           </Text>
         </View>
