@@ -55,9 +55,9 @@ const notifications = [
 const AVATAR_URL =
   "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   const { colors } = useTheme();
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   const [categoryIndex, setCategoryIndex] = useState(0);
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
