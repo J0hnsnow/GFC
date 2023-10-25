@@ -51,7 +51,8 @@ const TabsNavigator = () => {
           tabBarIcon(props) {
             return (
               <View style={{}}>
-                <Icons name="home" {...props} />;<Text>Home</Text>
+                <Icons name="home" {...props} />
+                <Text>Home</Text>
               </View>
             );
 
@@ -68,7 +69,8 @@ const TabsNavigator = () => {
           tabBarIcon(props) {
             return (
               <View style={{}}>
-                <Icons name="work" {...props} />;<Text>Grow</Text>
+                <Icons name="work" {...props} />
+                <Text>Portfoilio</Text>
               </View>
             );
 
@@ -85,7 +87,8 @@ const TabsNavigator = () => {
           tabBarIcon(props) {
             return (
               <View style={{}}>
-                <Icons name="star" {...props} />;<Text>Rewards</Text>
+                <Icons name="star" {...props} />
+                <Text>Rewards</Text>
               </View>
             );
 
@@ -103,7 +106,8 @@ const TabsNavigator = () => {
           tabBarIcon(props) {
             return (
               <View style={{}}>
-                <Icons name="swap-vert" {...props} />;<Text>Swap</Text>
+                <Icons name="swap-vert" {...props} />
+                <Text>Swap</Text>
               </View>
             );
             // return <Icons name="swap-vert" {...props} />;
@@ -136,7 +140,8 @@ const TabsNavigator = () => {
           tabBarIcon(props) {
             return (
               <View style={{}}>
-                <Icons name="shop" {...props} />;<Text>Shop</Text>
+                <Icons name="shop" {...props} />
+                <Text>Shop</Text>
               </View>
             );
             // return <Icons name="settings" {...props} />;
