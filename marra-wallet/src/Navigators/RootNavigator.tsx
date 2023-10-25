@@ -8,13 +8,14 @@ import Login from "../Screens/Registration/Login";
 import Signup from "../Screens/Registration/Signup";
 import Transaction from "../Screens/Transaction";
 import SettingScreen from "../Screens/SettingScreen";
+import GrowScreen from "../Screens/GrowScreen";
 
 export type RootStackParamList = {
   TabsStack: NavigatorScreenParams<TabsStackParamList>;
   details: undefined;
   login: undefined;
   signup: undefined;
-  portfolio: undefined;
+  grow: undefined;
   transaction: undefined;
   settings: undefined;
 };
@@ -30,7 +31,7 @@ const RootNavigator = () => {
           headerShown: false,
         }}
       />
-      <RootStack.Screen name="details" component={DetailsScreen} />
+      <RootStack.Screen name="grow" component={GrowScreen} />
       <RootStack.Screen
         name="signup"
         component={Signup}
@@ -59,7 +60,7 @@ const RootNavigator = () => {
           headerShown: false,
         }}
       />
-      <RootStack.Screen name="portfolio" component={Portfolio} />
+      {/* <RootStack.Screen name="portfolio" component={Portfolio} /> */}
     </RootStack.Navigator>
   );
 };

@@ -155,10 +155,20 @@ const HomeScreen = ({ navigation }) => {
                   // "rgb(122, 49, 111)",
                 }}
               > */}
-            <View style={{ gap: 12, alignItems: "center" }}>
+            <View
+              style={{
+                gap: 12,
+                alignItems: "center",
+                alignSelf: "center",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
               <View
                 style={{
                   flexDirection: "row",
+                  alignSelf: "center",
+                  left: 90,
                 }}
               >
                 <Icons
@@ -191,38 +201,39 @@ const HomeScreen = ({ navigation }) => {
               >
                 Available 80.59
               </Text>
-            </View>
-            <TouchableOpacity
-              style={{
-                alignItems: "center",
-                backgroundColor: "rgba(3, 4, 95, 0.2)",
-                height: 30,
-                justifyContent: "center",
-                borderRadius: 12,
-                width: 150,
-                margin: "auto",
-              }}
-            >
+
               <TouchableOpacity
-                onPress={() => navigation.navigate("portfolio")}
-                style={{ flexDirection: "row", gap: 10 }}
+                style={{
+                  alignItems: "center",
+                  backgroundColor: "rgba(3, 4, 95, 0.2)",
+                  height: 30,
+                  justifyContent: "center",
+                  borderRadius: 12,
+                  width: 150,
+                  margin: "auto",
+                }}
               >
-                <Icons name="work" style={{ color: "white", fontSize: 14 }} />
-                <Text style={{ color: "white", fontFamily: "Medium" }}>
-                  Portfolio
-                </Text>
-                <Icons
-                  name="chevron-right"
-                  style={{
-                    color: "white",
-                    fontSize: 14,
-                    borderRadius: 50,
-                    backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                    alignSelf: "center",
-                  }}
-                />
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("portfolio")}
+                  style={{ flexDirection: "row", gap: 10 }}
+                >
+                  <Icons name="work" style={{ color: "white", fontSize: 14 }} />
+                  <Text style={{ color: "white", fontFamily: "Medium" }}>
+                    Portfolio
+                  </Text>
+                  <Icons
+                    name="chevron-right"
+                    style={{
+                      color: "white",
+                      fontSize: 14,
+                      borderRadius: 50,
+                      backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                      alignSelf: "center",
+                    }}
+                  />
+                </TouchableOpacity>
               </TouchableOpacity>
-            </TouchableOpacity>
+            </View>
             {/* </TouchableOpacity> */}
           </View>
           {/* four buttons */}
@@ -235,7 +246,8 @@ const HomeScreen = ({ navigation }) => {
           >
             <View style={{}}>
               <TouchableOpacity
-                onPress={() => navigation.navigate("transaction")}
+                // onPress={() => navigation.navigate("transaction")}
+
                 style={{
                   width: 50,
                   height: 50,

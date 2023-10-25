@@ -44,7 +44,7 @@ const Card = () => {
       {/* card 1 */}
       <View>
         <Cardgradient>
-          <View style={{ flex: 1, paddingVertical: 14 }}>
+          <View style={{ flex: 1, paddingVertical: 14, width: 300 }}>
             <Text style={{ fontFamily: "Bold", color: "white", fontSize: 20 }}>
               Previous Transactions
             </Text>
@@ -137,7 +137,7 @@ const Card = () => {
       {/* Notifications */}
       <View>
         <Cardgradient>
-          <View style={{ flex: 1, paddingVertical: 14 }}>
+          <View style={{ flex: 1, paddingVertical: 14, width: 300 }}>
             <Text style={{ fontFamily: "Bold", color: "white", fontSize: 20 }}>
               Notifications
             </Text>
@@ -193,10 +193,10 @@ const Card = () => {
                           alignItems: "center",
                           // backgroundColor: "rgba(3, 4, 95, 0.2)",
                           backgroundColor: "rgba(255, 255, 255, 0.2)",
-                          height: 30,
+                          height: 10,
                           justifyContent: "center",
                           borderRadius: 12,
-                          width: 60,
+                          width: 80,
                         }}
                       >
                         <Text style={{ color: "white", fontFamily: "Bold" }}>

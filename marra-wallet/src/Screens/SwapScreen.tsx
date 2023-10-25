@@ -339,7 +339,7 @@ const SwapScreen = () => {
               </View>
               <Text style={{ fontFamily: "Regular", color: "white" }}>1%</Text>
             </View>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={{
                 flex: 1,
 
@@ -362,7 +362,7 @@ const SwapScreen = () => {
               <Text style={{ color: "white", fontFamily: "Regular" }}>
                 Connect Wallet
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </SafeAreaView>
       </ScrollView>
