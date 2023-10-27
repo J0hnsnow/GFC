@@ -31,7 +31,13 @@ const RootNavigator = () => {
           headerShown: false,
         }}
       />
-      <RootStack.Screen name="grow" component={GrowScreen} />
+      <RootStack.Screen
+        name="grow"
+        component={GrowScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
       <RootStack.Screen
         name="signup"
         component={Signup}

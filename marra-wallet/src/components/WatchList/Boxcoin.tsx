@@ -60,7 +60,7 @@ const Boxcoin = ({ item }: any) => {
       <View style={{ marginLeft: 10 }}>
         <TouchableOpacity
           style={{
-            flex: 1,
+            // flex: 1,
             width: 70,
             borderRadius: 12,
             borderWidth: 1,

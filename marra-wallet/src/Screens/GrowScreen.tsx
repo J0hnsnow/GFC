@@ -185,14 +185,13 @@ const GrowScreen = () => {
 
                 borderRadius: 12,
                 // borderWidth: 1,
-                borderColor: colors.border,
+                // borderColor: colors.border,
                 alignItems: "center",
 
                 paddingHorizontal: 30,
                 flexDirection: "row",
-
-                backgroundColor: "#050730",
-                // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
+                backgroundColor: "#0455bf",
+                // backgroundColor: "#050730",
 
                 paddingVertical: 14,
               }}

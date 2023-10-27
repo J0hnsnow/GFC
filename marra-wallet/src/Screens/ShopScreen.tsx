@@ -47,7 +47,7 @@ const Rewards = () => {
                   />
                 </TouchableOpacity>
                 <Text style={{ color: "white", fontFamily: "Bold", top: 10 }}>
-                  Grow
+                  Shop
                 </Text>
               </View>
               <View>
@@ -135,45 +135,13 @@ const Rewards = () => {
               </TouchableOpacity>
             </View>
             {/* card 1 */}
-            <View>
-              <View style={{ paddingVertical: 24 }}>
-                <Cardgradient>
-                  <View style={{ width: 300 }}>
-                    <Image
-                      source={{ uri: IMAGE_1 }}
-                      style={{
-                        width: 200,
-                        height: 200,
-                        aspectRatio: 1,
-                        // borderRadius: 32,
-                        borderColor: "white",
-                      }}
-                      resizeMode="cover"
-                    />
-                    <Text
-                      style={{
-                        color: "white",
-                        fontFamily: "Bold",
-                        paddingVertical: 10,
-                      }}
-                    >
-                      Grow as you earn
-                    </Text>
-
-                    <Text
-                      style={{
-                        color: "white",
-                        fontFamily: "Medium",
-                        paddingVertical: 10,
-                      }}
-                    >
-                      $10,000 beating your bucketlist
-                    </Text>
-                  </View>
-                </Cardgradient>
-              </View>
+            <View style={{ paddingVertical: 24 }}>
+              <Card />
             </View>
-            <View>
+            <View style={{}}>
+              <Card />
+            </View>
+            <View style={{ paddingVertical: 24 }}>
               <Card />
             </View>
             {/* button */}
@@ -191,14 +159,14 @@ const Rewards = () => {
                 paddingHorizontal: 30,
                 flexDirection: "row",
 
-                backgroundColor: "#050730",
+                backgroundColor: "#0455bf",
                 // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
 
                 paddingVertical: 14,
               }}
             >
               <Text style={{ color: "white", fontFamily: "Medium" }}>
-                Create a new grow jar
+                Shop with us
               </Text>
             </TouchableOpacity>
           </View>

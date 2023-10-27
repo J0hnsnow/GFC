@@ -140,20 +140,19 @@ const Rewards = () => {
           </View>
           <TouchableOpacity
             style={{
-              flex: 1,
+              // flex: 1,
 
               top: 10,
-
+              // width: 300,
               borderRadius: 12,
               // borderWidth: 1,
               // borderColor: colors.border,
               alignItems: "center",
 
-              paddingHorizontal: 30,
-              flexDirection: "row",
+              paddingHorizontal: 24,
+              // flexDirection: "row",
 
-              backgroundColor: "#050730",
-              // backgroundColor: "  rgba(0, 0, 0, 0.14) 100%",
+              backgroundColor: "#0455bf",
 
               paddingVertical: 14,
             }}

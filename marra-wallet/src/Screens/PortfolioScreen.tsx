@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import ScreenGradient from "./ScreenGradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icons from "@expo/vector-icons/MaterialIcons";
-import { useTheme } from "@react-navigation/native";
+import { useNavigation, useTheme } from "@react-navigation/native";
 import { FontAwesome } from "@expo/vector-icons";
 import WatchList from "../components/WatchList/WatchList";
 
@@ -36,14 +36,15 @@ const AVATAR_URL =
   "https://image.winudf.com/v2/image1/bmV0LndsbHBwci5ib3lzX3Byb2ZpbGVfcGljdHVyZXNfc2NyZWVuXzBfMTY2NzUzNzYxN18wOTk/screen-0.webp?fakeurl=1&type=.webp";
 
 const Categories = ["Transfer", "Buy", "Grow", "Swap"];
-const Portfolio = ({ navigation }) => {
+const Portfolio = ({}) => {
+  const navigation = useNavigation();
   const { colors } = useTheme();
   const [listIndex, setListIndex] = useState(0);
   const [categoryIndex, setCategoryIndex] = useState(0);
 
   return (
     <ScreenGradient>
-      <ScrollView>
+      <ScrollView style={{ flex: 1 }}>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
           <View style={{ flexDirection: "row", paddingHorizontal: 24 }}>
             <Icons
@@ -107,7 +108,7 @@ const Portfolio = ({ navigation }) => {
           </View>
           {/* flatlist */}
           <View>
-            <FlatList
+            {/* <FlatList
               data={Categories}
               horizontal
               showsHorizontalScrollIndicator={false}
@@ -119,7 +120,7 @@ const Portfolio = ({ navigation }) => {
                 const isSelected = categoryIndex === index;
                 return (
                   <TouchableOpacity
-                    onPress={() => setCategoryIndex(index)}
+                    onPress={() => setCategoryIndex(index) }
                     style={{
                       backgroundColor: isSelected
                         ? colors.primary
@@ -144,7 +145,122 @@ const Portfolio = ({ navigation }) => {
                   </TouchableOpacity>
                 );
               }}
-            />
+            /> */}
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              gap: 10,
+              justifyContent: "space-between",
+              paddingHorizontal: 24,
+            }}
+          >
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("transaction")}
+                style={{
+                  paddingHorizontal: 10,
+                  paddingVertical: 12,
+                  borderRadius: 100,
+
+                  borderColor: colors.border,
+
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    color: "white",
+                    fontFamily: "Regular",
+                    marginTop: 4,
+                  }}
+                >
+                  Transfer
+                </Text>
+              </TouchableOpacity>
+            </View>
+            {/* button2  */}
+            <View style={{}}>
+              <View
+                style={{
+                  paddingHorizontal: 20,
+                  paddingVertical: 12,
+                  borderRadius: 100,
+
+                  borderColor: colors.border,
+
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    color: "white",
+                    fontFamily: "Regular",
+                    marginTop: 4,
+                  }}
+                >
+                  Buy
+                </Text>
+              </View>
+            </View>
+            {/* botton 3 */}
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("grow")}
+                style={{
+                  paddingHorizontal: 20,
+                  paddingVertical: 12,
+                  borderRadius: 100,
+
+                  borderColor: colors.border,
+
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    color: "white",
+                    fontFamily: "Regular",
+                    marginTop: 4,
+                  }}
+                >
+                  Grow
+                </Text>
+              </TouchableOpacity>
+            </View>
+            {/* button 4 */}
+            <View style={{}}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("swap")}
+                style={{
+                  paddingHorizontal: 20,
+                  paddingVertical: 12,
+                  borderRadius: 100,
+
+                  borderColor: colors.border,
+
+                  backgroundColor: "#35d6ed",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text
+                  style={{
+                    color: "white",
+                    fontFamily: "Regular",
+                    marginTop: 4,
+                  }}
+                >
+                  Swap
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
           {/* coins */}
           <View>
