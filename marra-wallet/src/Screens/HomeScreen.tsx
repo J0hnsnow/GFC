@@ -55,9 +55,9 @@ const notifications = [
 const AVATAR_URL =
   "https://media.istockphoto.com/id/1445226966/photo/girl-friends-hug-and-travel-summer-vacation-outdoors-on-safari-diverse-happy-gen-z-women.webp?b=1&s=170667a&w=0&k=20&c=yJfrZFIisFCli7U-r7VC3XDtJR8dmHqARld0cLv9ARY=";
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ({}) => {
   const { colors } = useTheme();
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   const [categoryIndex, setCategoryIndex] = useState(0);
 
   const bottomSheetModalRef = useRef<BottomSheetModal>(null);
@@ -74,7 +74,7 @@ const HomeScreen = ({ navigation }) => {
   }, []);
   return (
     <ScreenGradient>
-      <ScrollView>
+      <ScrollView style={{ flex: 1 }}>
         <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
           {/* nav */}
           <View
@@ -246,8 +246,7 @@ const HomeScreen = ({ navigation }) => {
           >
             <View style={{}}>
               <TouchableOpacity
-                // onPress={() => navigation.navigate("transaction")}
-
+                onPress={() => navigation.navigate("transaction")}
                 style={{
                   width: 50,
                   height: 50,
@@ -299,7 +298,8 @@ const HomeScreen = ({ navigation }) => {
             </View>
             {/* botton 3 */}
             <View style={{}}>
-              <View
+              <TouchableOpacity
+                onPress={() => navigation.navigate("grow")}
                 style={{
                   width: 50,
                   height: 50,
@@ -314,7 +314,7 @@ const HomeScreen = ({ navigation }) => {
                 >
                   %
                 </Text>
-              </View>
+              </TouchableOpacity>
               <Text
                 style={{ color: "white", fontFamily: "Regular", marginTop: 4 }}
               >

@@ -163,7 +163,7 @@ const Card = () => {
                     flex: 1,
                     alignContent: "center",
                     // backgroundColor: "rgba(3, 4, 95, 0.2)",
-                    width: 300,
+                    // width: 300,
                     paddingVertical: 10,
                     borderRadius: 12,
                   }}
@@ -204,14 +204,14 @@ const Card = () => {
                         // height: 20,
                         justifyContent: "center",
                         borderRadius: 12,
-                        width: 80,
+                        width: 70,
                       }}
                     >
                       <Text
                         style={{
                           fontFamily: "Bold",
                           color: "white",
-                          // paddingVertical: 7,
+                          // paddingVertical:
                         }}
                       >
                         {item.status}
@@ -295,6 +295,7 @@ const Card = () => {
             </Text>
 
             <TouchableOpacity
+              onPress={() => navigation.navigate("grow")}
               style={{
                 alignItems: "center",
                 backgroundColor: "#35d6ed",
@@ -470,14 +471,15 @@ const Card = () => {
           <TouchableOpacity
             style={{
               alignItems: "center",
-              backgroundColor: "white",
+              // backgroundColor: "white",
+              backgroundColor: "#35d6ed",
               height: 30,
               justifyContent: "center",
               borderRadius: 12,
               width: 100,
             }}
           >
-            <Text style={{ color: "black", fontFamily: "Medium" }}>
+            <Text style={{ color: "white", fontFamily: "Medium" }}>
               Learn more
             </Text>
           </TouchableOpacity>
@@ -590,14 +592,15 @@ const Card = () => {
           <TouchableOpacity
             style={{
               alignItems: "center",
-              backgroundColor: "white",
+              // backgroundColor: "white",
+              backgroundColor: "#35d6ed",
               height: 30,
               justifyContent: "center",
               borderRadius: 12,
               width: 100,
             }}
           >
-            <Text style={{ color: "black", fontFamily: "Medium" }}>
+            <Text style={{ color: "white", fontFamily: "Medium" }}>
               Learn more
             </Text>
           </TouchableOpacity>
