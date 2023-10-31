@@ -214,7 +214,7 @@ const HomeScreen = ({}) => {
                 }}
               >
                 <TouchableOpacity
-                  onPress={() => navigation.navigate("portfolio")}
+                  onPress={() => navigation.navigate("confirm")}
                   style={{ flexDirection: "row", gap: 10 }}
                 >
                   <Icons name="work" style={{ color: "white", fontSize: 14 }} />

@@ -9,6 +9,9 @@ import Signup from "../Screens/Registration/Signup";
 import Transaction from "../Screens/Transaction";
 import SettingScreen from "../Screens/SettingScreen";
 import GrowScreen from "../Screens/GrowScreen";
+import SendScreen from "../Screens/SendScreen";
+import ConfirmTransfer from "../Screens/ConfirmTransfer";
+import ConfirmScreen from "../Screens/ConfirmScreen";
 
 export type RootStackParamList = {
   TabsStack: NavigatorScreenParams<TabsStackParamList>;
@@ -18,6 +21,9 @@ export type RootStackParamList = {
   grow: undefined;
   transaction: undefined;
   settings: undefined;
+  confirm: undefined;
+  confirmTransfer: undefined;
+  send: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
@@ -66,7 +72,27 @@ const RootNavigator = () => {
           headerShown: false,
         }}
       />
-      {/* <RootStack.Screen name="portfolio" component={Portfolio} /> */}
+      <RootStack.Screen
+        name="send"
+        component={SendScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <RootStack.Screen
+        name="confirmTransfer"
+        component={ConfirmTransfer}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <RootStack.Screen
+        name="confirm"
+        component={ConfirmScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
     </RootStack.Navigator>
   );
 };
