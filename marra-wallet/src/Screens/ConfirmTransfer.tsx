@@ -18,38 +18,15 @@ const ConfirmTransfer = () => {
     <ScreenGradient>
       <ScrollView>
         <SafeAreaView>
-          <View style={{ paddingHorizontal: 24 }}>
+          <View style={{ paddingHorizontal: 24, gap: 24 }}>
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: "space-between",
+                // justifyContent: "space-between",
+                gap: 10,
                 paddingVertical: 24,
               }}
             >
-              <View style={{ flexDirection: "row", gap: 10 }}>
-                <TouchableOpacity
-                  // onPress={() => navigation.navigate("transaction")}
-                  style={{
-                    width: 40,
-                    height: 40,
-                    borderRadius: 50,
-                    backgroundColor: "#35d6ed",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Icons
-                    name="military-tech"
-                    style={{
-                      color: "white",
-                      fontSize: 28,
-                    }}
-                  />
-                </TouchableOpacity>
-                <Text style={{ color: "white", fontFamily: "Bold", top: 10 }}>
-                  Rewards
-                </Text>
-              </View>
               <View>
                 <TouchableOpacity
                   style={{
@@ -61,106 +38,234 @@ const ConfirmTransfer = () => {
 
                     alignItems: "center",
                     justifyContent: "center",
-                    borderRadius: 22,
+                    borderRadius: 40,
 
                     backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
                   }}
                 >
-                  <Text style={{ color: "white", fontFamily: "Regular" }}>
-                    Balance $15.13
-                  </Text>
+                  <Icons
+                    name="chevron-right"
+                    style={{
+                      color: "white",
+                      fontSize: 14,
+                      borderRadius: 50,
+                      // backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                      alignSelf: "center",
+                    }}
+                  />
                 </TouchableOpacity>
               </View>
+              <Text style={{ color: "white", fontFamily: "Regular", left: 50 }}>
+                Summary
+              </Text>
             </View>
             {/* second */}
-            <View
-              style={{ flexDirection: "row", paddingVertical: 24, gap: 10 }}
+            <Cardgradient>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+
+                  paddingVertical: 24,
+                }}
+              >
+                <View style={{ flexDirection: "row", width: 300 }}>
+                  <Text style={{ color: "white", fontFamily: "Regular" }}>
+                    To: d7hjyu678y...fugo788
+                  </Text>
+                  <Icons
+                    name="chevron-right"
+                    style={{
+                      color: "white",
+                      fontSize: 14,
+                      borderRadius: 50,
+                      backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                      alignSelf: "center",
+                    }}
+                  />
+                </View>
+
+                <View>
+                  <TouchableOpacity
+                    style={{
+                      flex: 1,
+                      paddingHorizontal: 14,
+
+                      height: 40,
+                      // width: 20,
+
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: 40,
+
+                      backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                    }}
+                  >
+                    <Icons
+                      name="work"
+                      style={{
+                        color: "white",
+                        fontSize: 14,
+                        borderRadius: 50,
+                        backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                        alignSelf: "center",
+                      }}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Cardgradient>
+            {/* third */}
+
+            <Cardgradient>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+
+                  paddingVertical: 24,
+                }}
+              >
+                <View>
+                  <View style={{ paddingVertical: 10 }}>
+                    <Text style={{ color: "white", fontFamily: "Bold" }}>
+                      Sending...
+                    </Text>
+                  </View>
+                  <View style={{ flexDirection: "row", width: 300 }}>
+                    <Text style={{ color: "white", fontFamily: "Bold" }}>
+                      Fee
+                    </Text>
+                    {/* <Text
+                      style={{
+                        color: "white",
+                        fontSize: 14,
+                        borderRadius: 50,
+                        backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                        alignSelf: "center",
+                        width: 10,
+                      }}
+                    >
+                      !
+                    </Text> */}
+                    <Icons
+                      name="chevron-right"
+                      style={{
+                        color: "white",
+                        fontSize: 14,
+                        borderRadius: 50,
+                        backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                        alignSelf: "center",
+                      }}
+                    />
+                  </View>
+                </View>
+                <View>
+                  <Text
+                    style={{
+                      color: "white",
+                      fontFamily: "Bold",
+                      paddingVertical: 10,
+                    }}
+                  >
+                    $24.02
+                  </Text>
+                  <Text style={{ color: "white", fontFamily: "Bold" }}>
+                    $24.56
+                  </Text>
+                </View>
+              </View>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  backgroundColor: "#fff",
+                  paddingVertical: 24,
+                  flex: 1,
+                }}
+              >
+                <View style={{ flexDirection: "row" }}>
+                  <Text style={{ fontFamily: "Bold" }}>Total</Text>
+                  <Icons
+                    name="chevron-right"
+                    style={{
+                      color: "white",
+                      fontSize: 14,
+                      borderRadius: 50,
+                      backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
+                      alignSelf: "center",
+                    }}
+                  />
+                </View>
+
+                <View>
+                  <TouchableOpacity
+                    style={{
+                      flex: 1,
+                      paddingHorizontal: 14,
+
+                      height: 40,
+                      // width: 20,
+
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderRadius: 40,
+
+                      backgroundColor: "#fff",
+                    }}
+                  >
+                    <Text style={{ fontFamily: "Bold" }}>$48.37</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </Cardgradient>
+
+            <TouchableOpacity
+              style={{
+                // flex: 1,
+                top: 30,
+                // width: 300,
+                borderRadius: 12,
+                // borderWidth: 1,
+                // borderColor: colors.border,
+                alignItems: "center",
+
+                paddingHorizontal: 24,
+                // flexDirection: "row",
+
+                backgroundColor: "#fff",
+
+                paddingVertical: 14,
+              }}
             >
-              <TouchableOpacity
-                style={{
-                  flex: 1,
-                  paddingHorizontal: 14,
-
-                  height: 40,
-                  // width: 20,
-
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 22,
-
-                  backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                }}
-              >
-                <Text style={{ color: "white", fontFamily: "Regular" }}>
-                  Prize drawn
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
-                  flex: 1,
-                  paddingHorizontal: 14,
-
-                  height: 40,
-                  // width: 20,
-
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 22,
-
-                  backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                }}
-              >
-                <Text style={{ color: "white", fontFamily: "Regular" }}>
-                  Coming soon
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={{
-                  flex: 1,
-                  paddingHorizontal: 14,
-
-                  height: 40,
-                  // width: 20,
-
-                  alignItems: "center",
-                  justifyContent: "center",
-                  borderRadius: 22,
-
-                  backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
-                }}
-              >
-                <Text style={{ color: "white", fontFamily: "Regular" }}>
-                  Finished
-                </Text>
-              </TouchableOpacity>
-            </View>
-            <View>
-              <Card />
-            </View>
+              <Text style={{ fontFamily: "Regular" }}>
+                Only send to Near Wallet Addresses, Otherwise you might lose the
+                assets
+              </Text>
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity
-            style={{
-              // flex: 1,
+          <View style={{ bottom: 0 }}>
+            <TouchableOpacity
+              style={{
+                top: 50,
+                left: 0,
+                // position: "absolute",
+                borderRadius: 12,
 
-              top: 10,
-              // width: 300,
-              borderRadius: 12,
-              // borderWidth: 1,
-              // borderColor: colors.border,
-              alignItems: "center",
+                alignItems: "center",
 
-              paddingHorizontal: 24,
-              // flexDirection: "row",
+                paddingHorizontal: 24,
 
-              backgroundColor: "#0455bf",
+                backgroundColor: "#35d6ed",
 
-              paddingVertical: 14,
-            }}
-          >
-            <Text style={{ color: "white", fontFamily: "Regular" }}>
-              Check out rewards
-            </Text>
-          </TouchableOpacity>
+                paddingVertical: 10,
+              }}
+            >
+              <Text style={{ fontFamily: "Bold", color: "white" }}>
+                Continue
+              </Text>
+            </TouchableOpacity>
+          </View>
         </SafeAreaView>
       </ScrollView>
     </ScreenGradient>

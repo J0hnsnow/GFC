@@ -90,7 +90,7 @@ const ConfirmScreen = () => {
             <TouchableOpacity
               style={{
                 // flex: 1,
-
+                height: 50,
                 // width: 300,
                 borderRadius: 12,
                 // borderWidth: 1,
@@ -119,7 +119,7 @@ const ConfirmScreen = () => {
 
                 alignItems: "center",
                 justifyContent: "center",
-                borderRadius: 22,
+                borderRadius: 12,
 
                 backgroundColor: "  rgba(0, 0, 0, 0.2) 100%",
               }}
@@ -139,7 +139,13 @@ export default ConfirmScreen;
 const Card = () => {
   return (
     <View style={{}}>
-      <View style={{ width: 300 }}>
+      <View
+        style={{
+          justifyContent: "center",
+          alignContent: "center",
+          alignItems: "center",
+        }}
+      >
         <Image
           source={{ uri: IMAGE_1 }}
           style={{
